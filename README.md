@@ -1,15 +1,15 @@
-# Seminar 🎓
+# 🎓 Seminar
 
 Java application. Core concept of web apps.
 
-# Notes 📝
+# 📝 Notes
 
 Blok Team's cross-platform note taking web app written in Java  ♨️
 
-# Features ⚙️
+# ⚙️ Features
 
 <div align="center">
-  <img src="img/core_concept.jpeg" alt="user diagram" width="20%">
+  <img src="img/core_concept.jpeg" alt="user diagram" width="69%">
 </div>
 
 Ukratko o aplikaciji - sherable notes, script syntax check..
@@ -17,16 +17,16 @@ Ukratko o aplikaciji - sherable notes, script syntax check..
 Značajke aplikacije - user story.
 Šta aplikacija treba da omogući?
 
-# Database 
+# 🗄️ Database
 
 Model baze.
 
-# Tasks 📌
+# 📌 Tasks
 
-[] Task 1\\
-[] Task 2\\
-[] Task 3\\
-[] Task 4\\
+[] Task 1\
+[] Task 2\
+[] Task 3\
+[] Task 4\
 
 # Authors
 
