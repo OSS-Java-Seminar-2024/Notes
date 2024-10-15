@@ -23,7 +23,7 @@ Model baze.
 
 ## 📌 Tasks
 
-- [x] Napisati README  
+- [x] Working with README file
 - [] Task 1  
 - [] Task 2  
 - [] Task 3  
