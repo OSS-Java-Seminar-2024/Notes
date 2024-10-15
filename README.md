@@ -29,10 +29,10 @@ Model baze.
 - [] Task 3  
 - [] Task 4  
 
-## Authors
+## 🤓 Authors
 
 Developed by [*chora7*](https://github.com/chora7) and [*salveta96*](https://github.com/salveta96).
 
-## License
+## ⚖️ License
 
 For more information check the [LICENSE](LICENSE) file.
