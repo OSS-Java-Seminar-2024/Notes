@@ -23,10 +23,11 @@ Model baze.
 
 ## 📌 Tasks
 
-- [] Task 1\
-- [] Task 2\
-- [] Task 3\
-- [] Task 4\
+- [x] Napisati README<br\>
+- [] Task 1<br\>
+- [] Task 2<br\>
+- [] Task 3<br\>
+- [] Task 4<br\>
 
 ## Authors
 
