@@ -17,7 +17,7 @@ Ukratko o aplikaciji - sherable notes, script syntax check..
 Značajke aplikacije - user story.
 Šta aplikacija treba da omogući?
 
-# Database <i class="fa fa-database" aria-hidden="true"></i>
+# Database 
 
 Model baze.
 
@@ -30,7 +30,7 @@ Model baze.
 
 # Authors
 
-Developed by *chora7* and *salveta96*.
+Developed by [*chora7*](https://github.com/chora7) and [*salveta96*](https://github.com/salveta96).
 
 # License
 
