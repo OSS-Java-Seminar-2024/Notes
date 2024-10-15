@@ -1,6 +1,6 @@
 # Notes 📝
 
-Blok Team's cross-platform note taking web app written in Java.
+Blok Team's cross-platform note taking web app written in Java ♨️
 
 # Features
 
