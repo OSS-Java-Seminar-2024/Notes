@@ -1,21 +1,30 @@
 ## 🎓 Seminar
 
-<p style='text-align: justify'>
-Seminar iz kolegija Programiranje u Javi odnosi se na programiranje u programskom jeziku
-Java. Obuhvaća prepoznavanje objektno orijentirane paradigme u programskom jeziku
-Java, korištenje programskog jezika Java u različitim tehnologijama i na različitim 
-platformama. Organizacija i ishodi učenja prikazani su ispod.
-</p>
+Seminar iz kolegija Programiranje u Javi obuhvaća prepoznavanje objektno orijentirane
+paradigme u programskom jeziku Java, korištenje programskog jezika Java u različitim
+tehnologijama i na različitim platformama.
 
 ## 📝 About
 
 Blok Team's cross-platform note taking web app written in Java  ♨️
-
 ## ⚙️ Features
 
 <div align="center">
   <img src="img/core_concept.jpeg" alt="user diagram" width="69%">
 </div>
+
+U smislu imaš korisnike
+Svaki korisnik ima svoje notes i notifications sta moze namistit
+Notes i Notifications mogu i međusobno bit povezani više na više
+I korisnik može podjelit neku kombinaciju s nekim drugim korisnikom
+
+Jos san mislija ka da korisnik može podjelit u kategorije svoje stvari
+Tipa Faks , Posal, Osobno i tako to
+
+I da dodamo ka komponentu tema ka 
+namistit boje koje korisniku pašu
+Možda fontovi , eventualno ako nas dobro ide i ono baš komplete nekakvi basic themes
+Tipa rounded za razliku od pravih kutova
 
 Ukratko o aplikaciji - sherable notes, script syntax check..
 
