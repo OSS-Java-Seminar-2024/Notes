@@ -1,11 +1,11 @@
 ## 🎓 Seminar
 
-<div style="text-align: justify">
+<p style='text-align: justify'>
 Seminar iz kolegija Programiranje u Javi odnosi se na programiranje u programskom jeziku
 Java. Obuhvaća prepoznavanje objektno orijentirane paradigme u programskom jeziku
 Java, korištenje programskog jezika Java u različitim tehnologijama i na različitim 
 platformama. Organizacija i ishodi učenja prikazani su ispod.
-</div>
+</p>
 
 ## 📝 About
 
