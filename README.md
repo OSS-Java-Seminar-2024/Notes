@@ -1,13 +1,14 @@
 ## 🎓 Seminar
 
-Seminar iz kolegija Programiranje u Javi obuhvaća prepoznavanje objektno orijentirane
-paradigme u programskom jeziku Java, korištenje programskog jezika Java u različitim
-tehnologijama i na različitim platformama.
+The seminar from the course Programming in Java covers recognition of object-oriented 
+paradigms in the Java programming language - the use of the Java programming language 
+in different technologies and on different platforms.
 
 ## 📝 About
 
 Blok Team's cross-platform note taking web app written in Java  ♨️
-## ⚙️ Features
+
+## ⚙️ Structure
 
 <div align="center">
   <img src="img/core_concept.jpeg" alt="user diagram" width="69%">
