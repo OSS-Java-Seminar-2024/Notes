@@ -7,14 +7,19 @@ all your notes so you can share them with other Notes partners.
 
 ## ⚙️ Features
 
-### Guest 👥
+### Guests 👥
+
+- work on an Example Layout Template (<abbr>ELT</abbr>)
+- limited to 
+
+
+
 
 - deifinirati FEATURE za inicijalni model baze
 - Ukratko o aplikaciji - sherable notes, script syntax check..
-- Značajke aplikacije - user story.
 - Šta aplikacija treba da omogući?
 
-### User 👤
+### Users 👤
 
 ### Example User Story 🗣️
 
@@ -66,7 +71,7 @@ Teme (Themes),
 
 ## 📌 Tasks
 
-1. README ⌛️✅
+1. README ⌛️
 
 Boris:  
 - (README) List out features for Guest and User ⌛️
