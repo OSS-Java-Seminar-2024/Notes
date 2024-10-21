@@ -7,13 +7,12 @@ all your notes so you can share them with other Notes partners.
 
 ## ⚙️ Features
 
+[comment}: <> Based on the User Interface Layout Templates (abbr. UILT)
+
 ### Guests 👥
 
-- work on an Example Layout Template (<abbr>ELT</abbr>)
-- limited to 
-
-
-
+- work on an Example Layout Template (abbr. ELT)
+- are limited to 
 
 - deifinirati FEATURE za inicijalni model baze
 - Ukratko o aplikaciji - sherable notes, script syntax check..
