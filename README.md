@@ -10,16 +10,16 @@ Blok Team's cross-platform note taking web app written in Java  ♨️
 
 ## ⚙️ Features
 
-The user wants to run the Hostel Organization. They will log in to their account 
-(or create one). A selection of templates will be offered during registration. If 
-the user does not select a template, he will be sent to an empty template predefined
-in the application. The user will be able to print the created file, save it as a
+The user wants to run the Hostel Organization. The user logs in to their account 
+(or creates one). A selection of templates is offered upon login. If 
+the user does not select a template, he is sent to an empty template predefined
+in the application. The user is able to print the created file, save it as a
 pdf or share it with other users.  
-The main screen is divided into paragraphs and pages and an editor.  
-Inside the editor, all basic functions for text manipulation will be enabled -
+The main screen is divided into paragraphs, pages and an editor.  
+Inside the editor, all basic functions for text manipulation are enabled -
 font formatting, lists, styles and syntax checking.  
-It will be possible to add tables, files, images, links, symbols, emoticons and sound.  
-The user will be able to view all created paragraphs, search and delete them.
+It is possible to add tables, files, images, links, symbols, emoticons and sound.  
+The user is able to view all created paragraphs, search and delete them.
 
 ## 🗄️ Database
 
