@@ -27,7 +27,7 @@ Guest Block is locked for Guests, but it's Notes are writabble.
 --->
 
 ### Guests 👥
-ograničeni su na trajanje sesije
+
 - work with a Guest Layout Template (GLT)
 - may use all the built-in features
 - are limited to the duration of the session
