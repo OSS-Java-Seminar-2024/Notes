@@ -1,13 +1,9 @@
 ## 📝 About
 
-Notes is a web app for creating and deploying notes. Easly manage and edit all 
-your notes so you can share them with other partners.
+Notes is a web app for creating, deploying and sharing notes. Easly manage and organize
+all your notes so you can share them with other Notes partners.
 
 ## ⚙️ Features
-
-<div align="center">
-    <img src="assets/core_concept.jpeg" alt="basic diagram" width="79%">
-</div>
 
 Svaki korisnik ima svoj račun, koji sadrži bilješke (notes) i obavijesti (notifications)
 koje može prilagoditi prema vlastitim potrebama. Bilješke i obavijesti mogu biti međusobno
