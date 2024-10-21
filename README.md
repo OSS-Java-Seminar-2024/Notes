@@ -7,7 +7,7 @@ all your notes so you can share them with other Notes partners.
 
 ## ⚙️ Features
 
-[comment}: <> Based on the User Interface Layout Templates (abbr. UILT)
+[//]: # Based on the User Interface Layout Templates (abbr. UILT)
 
 ### Guests 👥
 
