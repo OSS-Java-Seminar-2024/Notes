@@ -1,17 +1,26 @@
 ## 📝 About
 
+<div align="justify"
 Notes is a web app for creating, deploying and sharing notes. Easly manage and organize
 all your notes so you can share them with other Notes partners.
+</div>
 
 ## ⚙️ Features
 
 ### Guest 👥
 
+- deifinirati FEATURE za inicijalni model baze
+- Ukratko o aplikaciji - sherable notes, script syntax check..
+- Značajke aplikacije - user story.
+- Šta aplikacija treba da omogući?
 
 ### User 👤
 
 ### Example User Story 🗣️
 
+- "as user" "as document creator"
+
+<div align="justify"
 Svaki korisnik ima svoj račun, koji sadrži bilješke (notes) i obavijesti (notifications)
 koje može prilagoditi prema vlastitim potrebama. Bilješke i obavijesti mogu biti međusobno
 povezane u odnosu više-na-više, što znači da jedna obavijest može biti povezana s više
@@ -24,11 +33,6 @@ prilagodbe boja koje odgovaraju korisniku, promjene fontova, a uz dovoljno resur
 razmatra se i dodavanje osnovnih tema za izgled sučelja. Primjerice, korisnici bi mogli
 birati između zaobljenih i kutastih elemenata dizajna.  
 
-Ukratko o aplikaciji - sherable notes, script syntax check..
-
-Značajke aplikacije - user story.
-Šta aplikacija treba da omogući?
-
 The user logs in to their account 
 (or creates one). A selection of templates is offered upon login. If 
 the user does not select a template, he is sent to an empty template predefined
@@ -39,9 +43,7 @@ Inside the editor, all basic functions for text manipulation are enabled -
 font formatting, lists, styles and syntax checking.  
 It is possible to add tables, files, images, links, symbols, emoticons and sound.  
 The user is able to view all created paragraphs, search and delete them.
-
-- deifinirati FEATURE za inicijalni model baze
-- "as user" "as document creator"
+</div>
 
 ## 🗄️ Database
 
@@ -64,12 +66,11 @@ Teme (Themes),
 
 ## 📌 Tasks
 
-1. README ⌛️
+1. README ⌛️✅
 
 Boris:  
-- (README) About ✅
 - (README) List out features for Guest and User ⌛️
-- (README) 
+- (README) Create an example Database ⌛️
 
 Silvestar:  
 - (personal) Set-up working environment (IntelliJ IDEA and Git) ⌛️
