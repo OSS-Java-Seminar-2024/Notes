@@ -10,6 +10,7 @@ all your notes so you can share them with other Notes partners.
 
 ### User 👤
 
+
 Svaki korisnik ima svoj račun, koji sadrži bilješke (notes) i obavijesti (notifications)
 koje može prilagoditi prema vlastitim potrebama. Bilješke i obavijesti mogu biti međusobno
 povezane u odnosu više-na-više, što znači da jedna obavijest može biti povezana s više
@@ -62,15 +63,13 @@ Teme (Themes),
 
 ## 📌 Tasks
 
-- [x] README
+1. README ✅
 
 Boris:  
-- [] Task 1  
-- [] Task 2  
+- List out functionalites ⌛️
 
 Silvestar:  
-- [] Task 3  
-- [] Task 4  
+- Set-up working environment (IntelliJ IDEA and Git) ⌛️
 
 ## 🤓 Authors
 
