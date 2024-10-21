@@ -10,6 +10,10 @@ Blok Team's cross-platform note taking web app written in Java  ♨️
 
 ## ⚙️ Features
 
+<div align="center">
+    <img src="img/core_concept.jpeg" alt="basic diagram" width="79%">
+</div>
+
 The user wants to run the Hostel Organization. The user logs in to their account 
 (or creates one). A selection of templates is offered upon login. If 
 the user does not select a template, he is sent to an empty template predefined
