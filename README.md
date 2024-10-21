@@ -5,12 +5,12 @@ all your notes so you can share them with other Notes partners.
 
 ## ⚙️ Features
 
-### Guest 🤖
+### Guest 👥
 
 
 ### User 👤
 
-### Example User Story 💭
+### Example User Story 🗣️
 
 Svaki korisnik ima svoj račun, koji sadrži bilješke (notes) i obavijesti (notifications)
 koje može prilagoditi prema vlastitim potrebama. Bilješke i obavijesti mogu biti međusobno
