@@ -5,6 +5,11 @@ all your notes so you can share them with other Notes partners.
 
 ## ⚙️ Features
 
+### 🤖Guest
+
+
+### 👤User
+
 Svaki korisnik ima svoj račun, koji sadrži bilješke (notes) i obavijesti (notifications)
 koje može prilagoditi prema vlastitim potrebama. Bilješke i obavijesti mogu biti međusobno
 povezane u odnosu više-na-više, što znači da jedna obavijest može biti povezana s više
