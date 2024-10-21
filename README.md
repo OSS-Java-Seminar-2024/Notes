@@ -1,6 +1,6 @@
 ## 📝 About
 
-<div align="justify"
+<div align="justify">
 Notes is a web app for creating, deploying and sharing notes. Easly manage and organize
 all your notes so you can share them with other Notes partners.
 </div>
