@@ -71,7 +71,7 @@ Boris:
 Silvestar:  
 - Set-up working environment (IntelliJ IDEA and Git) ⌛️
 
-## 🤓 Authors
+## 🎓 Authors
 
 Developed by [*chora7*](https://github.com/chora7) and [*salveta96*](https://github.com/salveta96).
 
