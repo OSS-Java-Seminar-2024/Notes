@@ -10,6 +10,7 @@ all your notes so you can share them with other Notes partners.
 
 ### User 👤
 
+### Example User Story 💭
 
 Svaki korisnik ima svoj račun, koji sadrži bilješke (notes) i obavijesti (notifications)
 koje može prilagoditi prema vlastitim potrebama. Bilješke i obavijesti mogu biti međusobno
@@ -63,18 +64,21 @@ Teme (Themes),
 
 ## 📌 Tasks
 
-1. README ✅
+1. README ⌛️
 
 Boris:  
-- List out functionalites ⌛️
+- (README) About ✅
+- (README) List out features for Guest and User ⌛️
+- (README) 
 
 Silvestar:  
-- Set-up working environment (IntelliJ IDEA and Git) ⌛️
+- (personal) Set-up working environment (IntelliJ IDEA and Git) ⌛️
+- (README) Write an Example User Story ⌛️
 
 ## 🎓 Authors
 
 Developed by [*chora7*](https://github.com/chora7) and [*salveta96*](https://github.com/salveta96).
 
-## ⚖️ License
+## ⚖️  License
 
 For more information check the [LICENSE](LICENSE) file.
