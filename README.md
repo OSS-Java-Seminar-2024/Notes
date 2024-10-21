@@ -42,8 +42,8 @@ ograničeni su na trajanje sesije
 
 ### Example User Story 🗣️
 
-> Must be formatted like so
-> > "As user.."
+> Must be formatted like so:
+> > "As user.."  
 > > "As document creator.."
 
 <div align="justify">
