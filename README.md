@@ -7,22 +7,44 @@ all your notes so you can share them with other Notes partners.
 
 ## ⚙️ Features
 
-[comment]: <> Based on the User Interface Layout Templates (abbr. UILT)
+<!---
+
+Predefined Layout Templates (abbr. LT) for different matters.
+
+Note-to-Blok Layout
+
+      <-     <-
+|----------------------------|
+| Blok | Note |     Editor   |
+|      |      |              |
+|      |      |              |
+|      |      |              |
+.      .      .              .
+.      .      .              .
+
+Guest Block is locked for Guests, but it's Notes are writabble.
+
+--->
 
 ### Guests 👥
-
-- work on an Example Layout Template (abbr. ELT)
-- are limited to 
+ograničeni su na trajanje sesije
+- work with a Guest Layout Template (GLT)
+- may use all the built-in features
+- are limited to the duration of the session
 
 - deifinirati FEATURE za inicijalni model baze
-- Ukratko o aplikaciji - sherable notes, script syntax check..
-- Šta aplikacija treba da omogući?
 
 ### Users 👤
 
+- Šta aplikacija treba da omogući?
+- Ukratko o aplikaciji - sherable notes, script syntax check..
+
+
 ### Example User Story 🗣️
 
-- "as user" "as document creator"
+> Must be formatted like so
+> > "As user.."
+> > "As document creator.."
 
 <div align="justify">
 Svaki korisnik ima svoj račun, koji sadrži bilješke (notes) i obavijesti (notifications)
