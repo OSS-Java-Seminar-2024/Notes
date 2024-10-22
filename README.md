@@ -33,8 +33,7 @@ User
 
 ### Guests 👥
 
-<div style="width:200px;overflow:auto">
-<pre>
+<code>
 |____________________________|
 | Blok | Note |    Editor    |
 |      |      |              |
@@ -42,8 +41,7 @@ User
 |      |      |              |
 .      .      .              .
 .      .      .              .
-</pre>
-</div>
+</code>
 
 
 - work on a Note-Blok Layout
