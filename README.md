@@ -34,14 +34,14 @@ User
 ### Guests 👥
 
 <div align="justify">
+<pre>|----------------------------|</pre>
+<pre>| Blok | Note |    Editor    |</pre>
 <pre>
-|_________________________|
-| Blok | Note |   Editor  |
-|      |      |           |
-|      |      |           |
-|      |      |           |
-.      .      .           .
-.      .      .           .
+|      |      |              |
+|      |      |              |
+|      |      |              |
+.      .      .              .
+.      .      .              .
 </pre>
 </div>
 
