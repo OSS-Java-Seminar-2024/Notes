@@ -33,7 +33,7 @@ User
 
 ### Guests 👥
 
-<pre>
+```
 +____________________________+
 | Blok | Note |    Editor    |
 +____________________________+
@@ -41,7 +41,7 @@ User
 |      |      |              |
 |      |      |              |
 +____________________________+
-</pre>
+```
 
 - work on a Note-Blok Layout
     - limited to Example Blok
