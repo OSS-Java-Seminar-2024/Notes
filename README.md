@@ -33,10 +33,10 @@ User
 
 ### Guests 👥
 
-<div align="justify">
-<pre>|----------------------------|</pre>
-<pre>| Blok | Note |    Editor    |</pre>
+<div style="width:200px;overflow:auto">
 <pre>
+|____________________________|
+| Blok | Note |    Editor    |
 |      |      |              |
 |      |      |              |
 |      |      |              |
