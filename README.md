@@ -55,6 +55,17 @@ User
 
 ### User 👤
 
+<pre>
+|       Blok     |              |
+|-------------------------------|
+| Section | Note |    Editor    |
+|         |      |              |
+|         |      |              |
+|         |      |              |
+.         .      .              .
+.         .      .              .
+</pre>
+
 - may with any predefined Layout Template
 - may create custom Layout Templates
 - are able to share Bloks and Notes 
