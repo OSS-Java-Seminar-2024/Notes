@@ -7,30 +7,6 @@ all your notes so you can share them with other Notes partners.
 
 ## ⚙️ Features
 
-<!---
-
-Guests
-
-|----------------------------|
-| Blok | Note |    Editor    |
-|      |      |              |
-|      |      |              |
-|      |      |              |
-.      .      .              .
-.      .      .              .
-
-User
-
-|       Blok     |              |
-|-------------------------------|
-| Section | Note |    Editor    |
-|         |      |              |
-|         |      |              |
-|         |      |              |
-.         .      .              .
-.         .      .              .
---->
-
 ### Guests 👥
 
 ```
@@ -44,13 +20,14 @@ User
 .        .        .                .
 ```
 
-- work on a Note-Blok Layout
-    - limited to Example Blok
-    - 
+<!-- As they cannot save changes and are limited to sessions, Guests work on one 
+Blok. They may have as much Notes as they wish. They are limited to Print or Export
+to PDF, seperate Notes or a whole Blok (no sharing). They may use all the tools for
+typography (fonts, colors, bullets, lists, spell check). They may import tables, files,
+pictures, URL-s, symbols to their Notes. Drawing is also enabled. -->
 
-
-- use Example Blok
-- may export Notes to PDF
+- have one Blok
+- export Blok/Notes to PDF
 - are limited to Guest Editor features
 - are limited to the duration of the session
 
@@ -58,7 +35,7 @@ User
 
 ```
 +_____________________________+
-| Blok            |                |
+|       Blok       |                |
 |_____________________________|
 | Section | Notes  |    Editor  |
 |_____________________________|
@@ -69,8 +46,7 @@ User
 .        .        .                .
 ```
 
-- may with any predefined Layout Template
-- may create custom Layout Templates
+- may have many Bloks
 - are able to share Bloks and Notes 
 - may enable syntax checking
 
