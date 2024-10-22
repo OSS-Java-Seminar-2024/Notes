@@ -34,7 +34,7 @@ User
 ### Guests 👥
 
 <pre>
-|___________________________|
+|____________________________|
 | Blok | Note |    Editor    |
 |      |      |              |
 |      |      |              |
@@ -55,16 +55,16 @@ User
 
 ### User 👤
 
-<p>
-|       Blok     |              |<br>
-|-------------------------------|<br>
-| Section | Note |    Editor    |<br>
-|         |      |              |<br>
-|         |      |              |<br>
-|         |      |              |<br>
-.         .      .              .<br>
-.         .      .              .<br>
-</p>
+<pre>
+|       Blok     |              |
+|-------------------------------|
+| Section | Note |    Editor    |
+|         |      |              |
+|         |      |              |
+|         |      |              |
+.         .      .              .
+.         .      .              .
+</pre>
 
 - may with any predefined Layout Template
 - may create custom Layout Templates
