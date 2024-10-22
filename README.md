@@ -28,23 +28,26 @@ Guest Block is locked for Guests, but it's Notes are writabble.
 
 ### Guests 👥
 
-- work with a Guest Layout Template (GLT)
+- work only with a Guest Layout Template (GLT)
 - may use all the built-in features
+- may only export to pdf
 - are limited to the duration of the session
-
-- deifinirati FEATURE za inicijalni model baze
 
 ### Users 👤
 
-- Šta aplikacija treba da omogući?
+- work with any predefined Layout Template
+- may create custom Layout Templates
+- 
+
+
 - Ukratko o aplikaciji - sherable notes, script syntax check..
 
 
 ### Example User Story 🗣️
 
 > Must be formatted like so:
-> > "As user.."  
-> > "As document creator.."
+> > "As a user.."  
+> > "As a document creator.."
 
 <div align="justify">
 Svaki korisnik ima svoj račun, koji sadrži bilješke (notes) i obavijesti (notifications)
