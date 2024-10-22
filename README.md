@@ -35,7 +35,7 @@ pictures, URL-s, symbols to their Notes. Drawing is also enabled. -->
 
 ```
 +_____________________________+
-|       Blok       |                |
+|       Blok       |               |
 |_____________________________|
 | Section | Notes  |    Editor  |
 |_____________________________|
