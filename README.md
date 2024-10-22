@@ -33,7 +33,7 @@ User
 
 ### Guests 👥
 
-<div align="justify"
+<div align="justify">
 |----------------------------|
 | Blok | Note |    Editor    |
 |      |      |              |
