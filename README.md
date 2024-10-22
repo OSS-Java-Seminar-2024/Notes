@@ -33,16 +33,15 @@ User
 
 ### Guests 👥
 
-<code>
-|____________________________|
+<pre>
+|___________________________|
 | Blok | Note |    Editor    |
 |      |      |              |
 |      |      |              |
 |      |      |              |
 .      .      .              .
 .      .      .              .
-</code>
-
+</pre>
 
 - work on a Note-Blok Layout
     - limited to Example Blok
