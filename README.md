@@ -56,16 +56,16 @@ User
 
 ### User 👤
 
-<pre>
-|       Blok     |              |
-|-------------------------------|
-| Section | Note |    Editor    |
-|         |      |              |
-|         |      |              |
-|         |      |              |
-.         .      .              .
-.         .      .              .
-</pre>
+```
++_____________________________+
+| Blok  | Notes |    Editor   |
+|_____________________________|
+|        |        |                |
+|        |        |                |
+|        |        |                |
+.        .        .                .
+.        .        .                .
+```
 
 - may with any predefined Layout Template
 - may create custom Layout Templates
