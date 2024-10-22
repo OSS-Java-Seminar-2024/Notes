@@ -33,6 +33,7 @@ User
 
 ### Guests 👥
 
+<div align="justify">
 <pre>
 |----------------------------|
 | Blok | Note |    Editor    |
@@ -42,6 +43,7 @@ User
 .      .      .              .
 .      .      .              .
 </pre>
+</div>
 
 
 - work on a Note-Blok Layout
