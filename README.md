@@ -9,39 +9,57 @@ all your notes so you can share them with other Notes partners.
 
 <!---
 
-Predefined Layout Templates (abbr. LT) for different matters.
+Guests
 
-Note-to-Blok Layout
-
-      <-     <-
 |----------------------------|
-| Blok | Note |     Editor   |
+| Blok | Note |    Editor    |
 |      |      |              |
 |      |      |              |
 |      |      |              |
 .      .      .              .
 .      .      .              .
 
-Guest Block is locked for Guests, but it's Notes are writabble.
+User
 
+|       Blok     |              |
+|-------------------------------|
+| Section | Note |    Editor    |
+|         |      |              |
+|         |      |              |
+|         |      |              |
+.         .      .              .
+.         .      .              .
 --->
 
 ### Guests 👥
 
-- work only with a Guest Layout Template (GLT)
-- may use all the built-in features
-- may only export to pdf
+<div align="justify"
+|----------------------------|
+| Blok | Note |    Editor    |
+|      |      |              |
+|      |      |              |
+|      |      |              |
+.      .      .              .
+.      .      .              .
+</div>
+
+
+- work on a Guest Layout Template (GLT)
+    - limited to Example Blok
+    - 
+
+
+- use Example Blok
+- may export Notes to PDF
+- are limited to Guest Editor features
 - are limited to the duration of the session
 
-### Users 👤
+### User 👤
 
-- work with any predefined Layout Template
+- may with any predefined Layout Template
 - may create custom Layout Templates
-- 
-
-
-- Ukratko o aplikaciji - sherable notes, script syntax check..
-
+- are able to share Bloks and Notes 
+- may enable syntax checking
 
 ### Example User Story 🗣️
 
@@ -98,7 +116,7 @@ Teme (Themes),
 1. README ⌛️
 
 Boris:  
-- (README) List out features for Guest and User ⌛️
+- (README) List out features for Guests and Users ⌛️
 - (README) Create an example Database ⌛️
 
 Silvestar:  
