@@ -33,18 +33,18 @@ User
 
 ### Guests 👥
 
-<div align="justify">
-|----------------------------|  
-| Blok | Note |    Editor    |  
-|      |      |              |  
-|      |      |              |  
-|      |      |              |  
-.      .      .              .  
-.      .      .              .  
-</div>
+<pre>
+|----------------------------|
+| Blok | Note |    Editor    |
+|      |      |              |
+|      |      |              |
+|      |      |              |
+.      .      .              .
+.      .      .              .
+</pre>
 
 
-- work on a Guest Layout Template (GLT)
+- work on a Note-Blok Layout
     - limited to Example Blok
     - 
 
