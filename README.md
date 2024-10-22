@@ -35,7 +35,7 @@ User
 
 <pre>
 |____________________________|
-| Blok | Note |    Editor    |
+|.Blok.|.Note.|....Editor....|
 |      |      |              |
 |      |      |              |
 |      |      |              |
