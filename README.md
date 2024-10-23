@@ -50,8 +50,9 @@ pictures, URL-s, symbols to their Notes. Drawing is also enabled. -->
 - are able to share Bloks and Notes 
 - may enable syntax checking
 
-###User Story 🗣️
+### User Story 🗣️
 
+<div align="justify">
 As a hotel manager, I want to organize guest information and hotel operations into categories and subcategories so that we can efficiently manage our services and enhance the guest experience. For example, I want to group information under main categories like "Reservations" or "Guest Services," and break them down further, such as "VIP Guests" under "Reservations" or "Room Maintenance" under "Housekeeping."
 
 I’d like to view these categories in a tree-like structure where staff can easily expand or collapse sections. I want to be able to add, rename, move, or delete categories with ease and assign colors or icons to them for quick identification. Additionally, I want to link guest preferences to their profiles to ensure that all staff members have access to relevant information.
@@ -59,10 +60,10 @@ I’d like to view these categories in a tree-like structure where staff can eas
 The ability to search, filter, and sort through information is crucial, as well as organizing templates for common requests that automatically create subcategories. When generating reports or analyzing data, I want the structure to be preserved.
 
 In short, this system will help us manage our hotel operations efficiently, making it easier to provide exceptional service to our guests.
+</div>
 
 
-
-###Development idea 🗣️
+### Development idea 🗣️
 
 <div align="justify">
 Each user has their own account, which contains notes and notifications that can be customized according to their needs. Notes and notifications can have a many-to-many relationship, meaning one notification can be linked to multiple notes and vice versa. Additionally, users can share a specific combination of notes and notifications with other users.
