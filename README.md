@@ -52,33 +52,24 @@ pictures, URL-s, symbols to their Notes. Drawing is also enabled. -->
 
 ### Example User Story 🗣️
 
-> Must be formatted like so:
-> > "As a user.."  
-> > "As a document creator.."
+As a user, I want to organize my notes and notifications into categories and subcategories, so I can easily manage and find information. For example, I want to group notes under main categories like "School" or "Work," and break them down further, such as "Math" under "School" or "Project A" under "Work."
+
+I’d like to view these categories in a tree-like structure where I can expand or collapse sections. I want to be able to easily add, rename, move, or delete categories, and assign colors or icons to them. I also want the option to link notes to multiple categories if they apply to more than one area.
+
+The ability to search, filter, and sort through notes is important, as well as being able to organize templates that automatically create subcategories. When I save or print notes, I want the structure to be preserved.
+
+In short, this system will help me organize my notes efficiently, making them easier to manage and access.
 
 <div align="justify">
-Svaki korisnik ima svoj račun, koji sadrži bilješke (notes) i obavijesti (notifications)
-koje može prilagoditi prema vlastitim potrebama. Bilješke i obavijesti mogu biti međusobno
-povezane u odnosu više-na-više, što znači da jedna obavijest može biti povezana s više
-bilješki i obrnuto. Također, korisnik može dijeliti određenu kombinaciju bilješki i obavijesti
-s drugim korisnicima.    
-Uz to, korisnicima bi se omogućilo organiziranje sadržaja u različite kategorije, kao
-što su "Faks", "Posao", "Osobno" i slično, kako bi lakše upravljali svojim informacijama.  
-Planirana je i implementacija mogućnosti personalizacije vizualnog sučelja, poput 
-prilagodbe boja koje odgovaraju korisniku, promjene fontova, a uz dovoljno resursa, 
-razmatra se i dodavanje osnovnih tema za izgled sučelja. Primjerice, korisnici bi mogli
-birati između zaobljenih i kutastih elemenata dizajna.  
+Each user has their own account, which contains notes and notifications that can be customized according to their needs. Notes and notifications can have a many-to-many relationship, meaning one notification can be linked to multiple notes and vice versa. Additionally, users can share a specific combination of notes and notifications with other users.
 
-The user logs in to their account 
-(or creates one). A selection of templates is offered upon login. If 
-the user does not select a template, he is sent to an empty template predefined
-in the application. The user is able to print the created file, save it as a
-pdf or share it with other users.  
-The main screen is divided into paragraphs, pages and an editor.  
-Inside the editor, all basic functions for text manipulation are enabled -
-font formatting, lists, styles and syntax checking.  
-It is possible to add tables, files, images, links, symbols, emoticons and sound.  
-The user is able to view all created paragraphs, search and delete them.
+Users are also able to organize content into different categories, such as "School," "Work," "Personal," and more, to manage their information more easily. These categories can be organized in a tree-like pattern, allowing for subcategories under main categories. For example, users can organize "School" by different subjects such as "Math," "Science," or "History," and "Work" by project names or specific tasks, creating a structured hierarchy for better management of their information.
+
+There is a planned implementation of customization features for the visual interface, such as adjusting colors to the user's preference, changing fonts, and, with sufficient resources, the addition of basic themes for the interface's appearance. For instance, users could choose between rounded and angular design elements.
+
+The user logs into their account (or creates one). A selection of templates is offered upon login. If the user does not choose a template, they are taken to an empty template predefined in the application. The user can print the created file, save it as a PDF, or share it with others.
+
+The main screen is divided into sections for paragraphs, pages, and an editor. In the editor, all basic text manipulation functions are enabled, including font formatting, lists, styles, and syntax checking. It is possible to add tables, files, images, links, symbols, emoticons, and audio. The user can view all created paragraphs, search through them, and delete them.
 </div>
 
 ## 🗄️ Database
