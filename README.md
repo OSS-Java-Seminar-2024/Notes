@@ -50,7 +50,7 @@ pictures, URL-s, symbols to their Notes. Drawing is also enabled. -->
 - are able to share Bloks and Notes 
 - may enable syntax checking
 
-### Example User Story 🗣️
+###User Story 🗣️
 
 As a user, I want to organize my notes and notifications into categories and subcategories, so I can easily manage and find information. For example, I want to group notes under main categories like "School" or "Work," and break them down further, such as "Math" under "School" or "Project A" under "Work."
 
@@ -59,6 +59,8 @@ I’d like to view these categories in a tree-like structure where I can expand 
 The ability to search, filter, and sort through notes is important, as well as being able to organize templates that automatically create subcategories. When I save or print notes, I want the structure to be preserved.
 
 In short, this system will help me organize my notes efficiently, making them easier to manage and access.
+
+###Development idea 🗣️
 
 <div align="justify">
 Each user has their own account, which contains notes and notifications that can be customized according to their needs. Notes and notifications can have a many-to-many relationship, meaning one notification can be linked to multiple notes and vice versa. Additionally, users can share a specific combination of notes and notifications with other users.
