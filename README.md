@@ -52,13 +52,15 @@ pictures, URL-s, symbols to their Notes. Drawing is also enabled. -->
 
 ###User Story 🗣️
 
-As a user, I want to organize my notes and notifications into categories and subcategories, so I can easily manage and find information. For example, I want to group notes under main categories like "School" or "Work," and break them down further, such as "Math" under "School" or "Project A" under "Work."
+As a hotel manager, I want to organize guest information and hotel operations into categories and subcategories so that we can efficiently manage our services and enhance the guest experience. For example, I want to group information under main categories like "Reservations" or "Guest Services," and break them down further, such as "VIP Guests" under "Reservations" or "Room Maintenance" under "Housekeeping."
 
-I’d like to view these categories in a tree-like structure where I can expand or collapse sections. I want to be able to easily add, rename, move, or delete categories, and assign colors or icons to them. I also want the option to link notes to multiple categories if they apply to more than one area.
+I’d like to view these categories in a tree-like structure where staff can easily expand or collapse sections. I want to be able to add, rename, move, or delete categories with ease and assign colors or icons to them for quick identification. Additionally, I want to link guest preferences to their profiles to ensure that all staff members have access to relevant information.
 
-The ability to search, filter, and sort through notes is important, as well as being able to organize templates that automatically create subcategories. When I save or print notes, I want the structure to be preserved.
+The ability to search, filter, and sort through information is crucial, as well as organizing templates for common requests that automatically create subcategories. When generating reports or analyzing data, I want the structure to be preserved.
 
-In short, this system will help me organize my notes efficiently, making them easier to manage and access.
+In short, this system will help us manage our hotel operations efficiently, making it easier to provide exceptional service to our guests.
+
+
 
 ###Development idea 🗣️
 
