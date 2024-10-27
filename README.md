@@ -63,7 +63,7 @@ As a hotel manager, I want to organize guest information and hotel operations in
 categories and subcategories so that we can efficiently manage our services and
 enhance the guest experience. For example, I want to group information under main
 categories like "Reservations" or "Guest Services," and break them down further, such
-as "VIP Guests" under "Reservations" or "Room Maintenance" under "Housekeeping."  
+as "VIP Guests" under "Reservations" or "Room Maintenance" under "Housekeeping."<br>
 
 I’d like to view these categories in a tree-like structure where staff can easily
 expand or collapse sections. I want to be able to add, rename, move, or delete
