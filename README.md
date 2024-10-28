@@ -87,15 +87,7 @@ it easier to provide exceptional service to our guests.
 
 ## 📌 Tasks
 
-1. README ⌛️
-
-Boris:  
-- (README) List out features for Guests and Users ⌛️
-- (README) Create an example Database ⌛️
-
-Silvestar:  
-- (personal) Set-up working environment (IntelliJ IDEA and Git) ⌛️
-- (README) Write an Example User Story ⌛️
+1. README ✅ (ali čekamo feedback od profesora ⌛)
 
 ## 🎓 Authors
 
