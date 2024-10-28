@@ -22,9 +22,9 @@ all your notes so you can share them with other Notes partners.
 
 - limited to one blok
 - limited to the duration of the session
-- may print and export (PDF) blok
+- print and export (PDF) blok
 - predefined application theme
-- may use all editor features
+- use all editor features
     - basic text manipulation functions
     - font formatting, lists, styles, syntax checking
     - adding tables, files, images, links, symbols, emoticons and audio
@@ -63,7 +63,7 @@ As a hotel manager, I want to organize guest information and hotel operations in
 categories and subcategories so that we can efficiently manage our services and
 enhance the guest experience. For example, I want to group information under main
 categories like "Reservations" or "Guest Services," and break them down further, such
-as "VIP Guests" under "Reservations" or "Room Maintenance" under "Housekeeping."<br>
+as "VIP Guests" under "Reservations" or "Room Maintenance" under "Housekeeping."  
 
 I’d like to view these categories in a tree-like structure where staff can easily
 expand or collapse sections. I want to be able to add, rename, move, or delete
@@ -81,22 +81,9 @@ it easier to provide exceptional service to our guests.
 
 ## 🗄️ Database
 
-Model baze.
-Tablica:
-
-Korisnici (Users),
-
-Bilješke (Notes),
-
-Obavijesti (Notifications),
-
-Kategorije (Categories),
-
-Povezanost Bilješki i Obavijesti (Note_Notification),
-
-Dijeljeni sadržaji (Shared_Items),
-
-Teme (Themes),
+<div align="justify">
+![database model](assets/java-seminar-database.png)
+<div>
 
 ## 📌 Tasks
 
