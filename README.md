@@ -82,7 +82,7 @@ it easier to provide exceptional service to our guests.
 ## 🗄️ Database
 
 <div align="center">
-  <img src="assets/java-seminar-database.png" alt="database model" width="80%">
+  <img src="assets/java-seminar-database.png" alt="database model" width="100%">
 </div>
 
 ## 📌 Tasks
