@@ -83,7 +83,7 @@ it easier to provide exceptional service to our guests.
 
 <div align="center">
   <img src="assets/java-seminar-database.png" alt="database model" width="80%">
-<div>
+</div>
 
 ## 📌 Tasks
 
