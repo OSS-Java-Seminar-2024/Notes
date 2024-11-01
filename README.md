@@ -1,29 +1,27 @@
-## 📝 About
+## 📝 O aplikaciji
 
 <div align="justify">
 </div>
 
-## ⚙️ Features
+## ⚙️ Značajke
 
 ### User Story 🗣️
 
 <div align="justify">
 </div>
 
-## 🗄️ Database
+## 🗄️ Model baze
 
 <div align="center">
   <img src="assets/kazaliste_baza.jpeg" alt="model baze" width="100%">
 </div>
 
-## 📌 Tasks
+## 📌 Zadaci
 
-## 🎓 Authors
+## 🎓 Autori
 
-Developed by:  
-[*chora7*](https://github.com/chora7)  
-[*salveta96*](https://github.com/salveta96).
+Razvijeno od strane [*chora7*](https://github.com/chora7) i [*salveta96*](https://github.com/salveta96).
 
-## ⚖️  License
+## ⚖️  Licenca
 
-For more information check the [LICENSE](LICENSE) file.
+Za više informacija posjetite [LICENSE](LICENSE) datoteku.
