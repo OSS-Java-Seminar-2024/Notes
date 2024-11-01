@@ -47,7 +47,7 @@ Sudionici:
 
 ## 🎓 Autori
 
-Razvijeno od strane [*chora7*](https://github.com/chora7) i [*salveta96*](https://github.com/salveta96).
+Razvijeno od strane [*Maplewood7*](https://github.com/Maplewood7), [*chora7*](https://github.com/chora7) i [*salveta96*](https://github.com/salveta96).
 
 ## ⚖️  Licenca
 
