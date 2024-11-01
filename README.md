@@ -35,6 +35,9 @@ Sudionici:
 ### User Story 🗣️
 
 <div align="justify">
+  U našem kazalištu svaki projekt uključuje mnogo ljudi, prostora i termina – od tehnike i scene, do umjetničkih timova i vanjskih suradnika. Sve to zahtijeva savršenu usklađenost i praćenje, što ponekad postane kaotično. Zato nam treba aplikacija koja će omogućiti da sve imamo na jednom mjestu.
+
+Uz nju, mogli bismo jednostavno dodijeliti radnike zadacima, rezervirati prostore prema potrebama i pratiti termine proba i izvedbi. Tako bi svi imali jasan pregled i ažurirane informacije, što bi našim projektima donijelo više reda i manje stresa.“
 </div>
 
 ## 🗄️ Model baze
