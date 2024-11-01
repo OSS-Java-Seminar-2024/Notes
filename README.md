@@ -22,6 +22,7 @@ Voditelj projekta:
 - datiranje pojedinih epoha projekta / datiranje zasebnih izvedbi  
 - generiranje izvješća za javnost / pregled projekta u vidu smislene cjeline  
 - mogućnost komunikacije s računovodstvom  
+
 Sudionici:
 - obavijesti o dodjeli projekta / informiranje voditelja o učešću  
 - postavljanje specijalizacije i statusa / dostupnost i područje interesa  
