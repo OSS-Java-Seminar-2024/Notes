@@ -1,43 +1,43 @@
 ## 📝 O aplikaciji
 
 <div align="justify">
-Bilo da je riječ o lutkarskoj predstavi ili baletu, Kazalište vam pruža interaktivno
-web sučelje za upravljanje kazališnim projektima. S lakoćom upravljajte sudionicima i
-efikasno dijelite informacije kako bi vaše izvedbe protekle u najboljem redu.
+Whether it’s a drama or a ballet, the Theater app offers you an interactive web interface for managing theater projects. Easily manage participants and efficiently share information to ensure your performances run smoothly.
 </div>
 
 ## ⚙️ Značajke
 
-Voditelj projekta:
-- potpuna kontrola nad pojedinostima projekta / upravljanje vidljivosti podataka  
-- dodavanje sudionika u projekat / dodjela projekata sudionicima  
-- određivanje uloge / specijalizacija sudionika  
-- pregled i promjena statusa sudionika  
-- kategoriziranje odjela / grupiranje sudionika  
-- raspored sudionika po odjelima / dodjela projektnih odjela sudionicima  
-- upravljanje statusom projekta / uvid i izmjena statusnih detalja  
-- odredba izvedbe i uvid u tok izvedbe / trajanje i vrsta izvedbe  
-- provjera dostupnosti i unos lokacija / određivanje lokacije izvedbe  
-- mogućnost proizvoljnog dijeljenja pjedinih informacija unutar tima  
-- datiranje pojedinih epoha projekta / datiranje zasebnih izvedbi  
-- generiranje izvješća za javnost / pregled projekta u vidu smislene cjeline  
-- mogućnost komunikacije s računovodstvom  
+Project Manager:
 
-Sudionici:
-- obavijesti o dodjeli projekta / informiranje voditelja o učešću  
-- postavljanje specijalizacije i statusa / dostupnost i područje interesa  
-- pregled aktivnih kazališnih projekata / upit za učešćem  
-- promjena statusa i aktivnosti / omogućeno datiranje bilješki  
-- filtriranje dostupnih uloga / gradnja iskustva sukladno izvedbama  
-- ukupno vrijeme učešća / dizanje statusa sukladno aktivnosti  
-- mogućnost dijeljenja iskustava s drugim sudionicima
+Full control over project details / data visibility management
+Adding participants to the project / assigning projects to participants
+Defining roles / specialization of participants
+Reviewing and updating participant statuses
+Categorizing departments / grouping participants
+Organizing participants by departments / assigning project departments to participants
+Managing project status / viewing and updating status details
+Setting and monitoring performance flow / duration and type of performance
+Checking availability and entering locations / setting performance location
+Ability to selectively share specific information within the team
+Setting dates for various project phases / dating individual performances
+Generating reports for the public / project overview as a cohesive unit
+Ability to communicate with accounting database
+
+Participants:
+
+Notifications about project assignment / informing the manager of participation
+Setting specialization and status / availability and areas of interest
+Viewing active theater projects / expressing interest in participation
+Changing status and activity / enabled dating of notes
+Filtering available roles / building experience through performances
+Total participation time / status progression based on activity
+Ability to share experiences with other participants
 
 ### User Story 🗣️
 
 <div align="justify">
-  U našem kazalištu svaki projekt uključuje mnogo ljudi, prostora i termina – od tehnike i scene, do umjetničkih timova. Sve to zahtijeva savršenu usklađenost i praćenje, što ponekad postane kaotično. Zato nam treba aplikacija koja će omogućiti da sve imamo na jednom mjestu.
+In our theater, each project involves many people, spaces, and schedules—from technical and stage crews to artistic teams. All of this requires perfect coordination and tracking, which can sometimes become chaotic. That’s why we need an application that allows us to have everything in one place.
 
-Uz nju, mogli bismo jednostavno dodijeliti radnike zadacima, rezervirati prostore prema potrebama i pratiti termine proba i izvedbi. Tako bi svi imali jasan pregled i ažurirane informacije, što bi našim projektima donijelo više reda i manje stresa.“
+With it, we could easily assign workers to tasks, reserve spaces as needed, and track rehearsal and performance schedules. This way, everyone would have a clear overview and up-to-date information, bringing more order and less stress to our projects.
 </div>
 
 ## 🗄️ Model baze
