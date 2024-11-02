@@ -1,10 +1,10 @@
-## 📝 O aplikaciji
+## 📝About
 
 <div align="justify">
 Whether it’s a drama or a ballet, the Theater app offers you an interactive web interface for managing theater projects. Easily manage participants and efficiently share information to ensure your performances run smoothly.
 </div>
 
-## ⚙️ Značajke
+## ⚙️ Features
 
 Project Manager:
 
@@ -30,7 +30,6 @@ Viewing active theater projects / expressing interest in participation
 Changing status and activity / enabled dating of notes
 Filtering available roles / building experience through performances
 Total participation time / status progression based on activity
-Ability to share experiences with other participants
 
 ### User Story 🗣️
 
@@ -40,18 +39,18 @@ In our theater, each project involves many people, spaces, and schedules—from 
 With it, we could easily assign workers to tasks, reserve spaces as needed, and track rehearsal and performance schedules. This way, everyone would have a clear overview and up-to-date information, bringing more order and less stress to our projects.
 </div>
 
-## 🗄️ Model baze
+## 🗄️ Database Model
 
 <div align="center">
   <img src="assets/kazaliste_baza.jpeg" alt="model baze" width="100%">
 </div>
 
-## 📌 Zadaci
+## 📌 Taskes
 
-## 🎓 Autori
+## 🎓 Authors
 
-Razvijeno od strane [*Maplewood7*](https://github.com/Maplewood7), [*chora7*](https://github.com/chora7) i [*salveta96*](https://github.com/salveta96).
+Developed By [*Maplewood7*](https://github.com/Maplewood7), [*chora7*](https://github.com/chora7) i [*salveta96*](https://github.com/salveta96).
 
-## ⚖️  Licenca
+## ⚖️  Licence
 
-Za više informacija posjetite [LICENSE](LICENSE) datoteku.
+For more info visit [LICENSE](LICENSE) file.
