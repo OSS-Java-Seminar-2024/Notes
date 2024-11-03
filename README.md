@@ -9,22 +9,16 @@ efikasno dijelite informacije kako bi vaše izvedbe protekle u najboljem redu.
 ## ⚙️ Značajke
 
 Voditelj projekta:  
-<!-- Projekt -->
 - objava projekta / upravljanje vidljivosti podataka  
 - dodavanje sudionika u projekat / dodjela projekata sudionicima  
 - generiranje izvješća za javnost / pregled projekta u vidu smislene cjeline  
-<!-- Projekt-Radnici -->
 - raspored sudionika po odjelima / dodjela projektnih odjela sudionicima  
 - određivanje uloge / specijalizacija sudionika  
 - pregled i promjena statusa sudionika  
-<!-- Status -->
 - upravljanje statusom projekta / uvid i izmjena statusnih detalja  
-<!-- Odjeli -->
 - kategoriziranje odjela / grupiranje sudionika  
-<!-- Izvedba -->
 - odredba izvedbe i uvid u tok izvedbe / trajanje i vrsta izvedbe  
 - datiranje pojedinih epoha projekta / datiranje zasebnih izvedbi  
-<!-- Lokacija -->
 - provjera dostupnosti i unos lokacija / određivanje lokacije izvedbe  
 - mogućnost proizvoljnog dijeljenja pjedinih informacija unutar tima  
 - mogućnost integracije s bazama podataka računovodstvom  
