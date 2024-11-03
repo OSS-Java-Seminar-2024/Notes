@@ -8,7 +8,7 @@ efikasno dijelite informacije kako bi vaše izvedbe protekle u najboljem redu.
 
 ## ⚙️ Značajke
 
-Voditelj projekta 📢
+### Voditelj projekta 📢
 - potpuna kontrola nad pojedinostima projekta / upravljanje vidljivosti podataka  
 - dodavanje sudionika u projekat / dodjela projekata sudionicima  
 - određivanje uloge / specijalizacija sudionika  
@@ -23,7 +23,7 @@ Voditelj projekta 📢
 - generiranje izvješća za javnost / pregled projekta u vidu smislene cjeline  
 - mogućnost komunikacije s računovodstvom  
 
-Sudionici 📸
+### Sudionici 📸
 - obavijesti o dodjeli projekta / informiranje voditelja o učešću  
 - postavljanje specijalizacije i statusa / dostupnost i područje interesa  
 - pregled aktivnih kazališnih projekata / upit za učešćem  
