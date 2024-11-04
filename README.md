@@ -6,15 +6,11 @@ Whether it’s a drama or a ballet, the Theater app offers you an interactive we
 
 ## ⚙️ Features
 
-Project Manager:
+Administration:
 
 Full control over project details / data visibility management
 
 Adding participants to the project / assigning projects to participants
-
-Defining roles / specialization of participants
-
-Reviewing and updating participant statuses
 
 Categorizing departments / grouping participants
 
@@ -34,7 +30,9 @@ Generating reports for the public / project overview as a cohesive unit
 
 Ability to communicate with accounting database
 
-Participants:
+
+
+Workers:
 
 Notifications about project assignment / informing the manager of participation
 
