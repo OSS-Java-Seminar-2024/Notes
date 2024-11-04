@@ -1,35 +1,32 @@
 ## 📝 O aplikaciji
 
 <div align="justify">
-Bilo da je riječ o lutkarskoj predstavi ili baletu, Kazalište vam pruža interaktivno
+Bilo da je riječ o dramskoj predstavi ili baletu, Kazalište vam pruža interaktivno
 web sučelje za upravljanje kazališnim projektima. S lakoćom upravljajte sudionicima i
 efikasno dijelite informacije kako bi vaše izvedbe protekle u najboljem redu.
 </div>
 
 ## ⚙️ Značajke
 
-Voditelj projekta:  
-- objava projekta / upravljanje vidljivosti podataka  
-- dodavanje sudionika u projekat / dodjela projekata sudionicima  
-- generiranje izvješća za javnost / pregled projekta u vidu smislene cjeline  
-- raspored sudionika po odjelima / dodjela projektnih odjela sudionicima  
-- određivanje uloge / specijalizacija sudionika  
+Administracija:  
+- objava projekta i upravljanje vidljivosti podataka  
+- dodavanje sudionika u projekat
+- dodjela projekata sudionicima  
+- raspored sudionika po odjelima 
+- određivanje uloge i specijalizacija sudionika  
 - pregled i promjena statusa sudionika  
-- upravljanje statusom projekta / uvid i izmjena statusnih detalja  
-- kategoriziranje odjela / grupiranje sudionika  
-- odredba izvedbe i uvid u tok izvedbe / trajanje i vrsta izvedbe  
-- datiranje pojedinih epoha projekta / datiranje zasebnih izvedbi  
-- provjera dostupnosti i unos lokacija / određivanje lokacije izvedbe  
+- upravljanje statusom projekta te uvid i izmjena statusa detalja  
+- kategoriziranje odjela i grupiranje sudionika  
+- određivanje izvedbi i uvid u status izvedbe  
+- označavanje pojedinih stadija projekta  
+- provjera dostupnosti i unos lokacija  
 - mogućnost proizvoljnog dijeljenja pjedinih informacija unutar tima  
 - mogućnost integracije s bazama podataka računovodstvom  
 
-Sudionici:  
-- obavijesti o dodjeli projekta / informiranje voditelja o učešću  
-- postavljanje specijalizacije i statusa / dostupnost i područje interesa  
-- pregled aktivnih kazališnih projekata / upit za učešćem  
-- promjena statusa i aktivnosti / omogućeno datiranje bilješki  
-- filtriranje dostupnih uloga / gradnja iskustva sukladno izvedbama  
-- ukupno vrijeme učešća / dizanje statusa sukladno aktivnosti  
+Radnici:  
+- obavijesti o dodjeli projekta
+- pregled aktivnih kazališnih projekata 
+- uvid u stanje i dostupnost lokacija
 
 ### User Story 🗣️
 
