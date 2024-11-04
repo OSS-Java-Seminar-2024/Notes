@@ -10,7 +10,7 @@ efikasno dijelite informacije kako bi vaše izvedbe protekle u najboljem redu.
 
 Administracija:  
 - objava projekta i upravljanje vidljivosti podataka  
-- dodavanje sudionika u projekat
+- dodavanje sudionika u projekt
 - dodjela projekata sudionicima  
 - raspored sudionika po odjelima 
 - određivanje uloge i specijalizacija sudionika  
@@ -20,7 +20,7 @@ Administracija:
 - određivanje izvedbi i uvid u status izvedbe  
 - označavanje pojedinih stadija projekta  
 - provjera dostupnosti i unos lokacija  
-- mogućnost proizvoljnog dijeljenja pjedinih informacija unutar tima  
+- mogućnost proizvoljnog dijeljenja pojedinih informacija unutar tima  
 - mogućnost integracije s bazama podataka računovodstvom  
 
 Radnici:  
