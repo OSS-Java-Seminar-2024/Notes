@@ -1,7 +1,7 @@
 ## 📝 O aplikaciji
 
 <div align="justify">
-Bilo da je riječ o dramskoj predstavi ili baletu, Kazalište vam pruža interaktivno
+Bilo da je riječ o dramskoj predstavi ili baletu, Teatar vam pruža interaktivno
 web sučelje za upravljanje kazališnim projektima. S lakoćom upravljajte sudionicima i
 efikasno dijelite informacije kako bi vaše izvedbe protekle u najboljem redu.
 </div>
