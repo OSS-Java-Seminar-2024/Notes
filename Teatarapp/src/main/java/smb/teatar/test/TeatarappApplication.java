@@ -8,6 +8,5 @@ public class TeatarappApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TeatarappApplication.class, args);
-		System.out.println("Welcome to Teatar app!");
 	}
 }
