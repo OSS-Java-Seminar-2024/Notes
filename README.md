@@ -44,6 +44,12 @@ Uz nju, mogli bismo jednostavno dodijeliti radnike zadacima, rezervirati prostor
 
 ## 📌 Zadaci
 
+[] Promijeniti bazu na engleski
+[] Promijeniti projekat na engleski?
+[] Preporučeno -> timestamp created_at & updated_at
+[] Detaljno pregledati projekat i testirati migracije
+[] User Management
+
 ## 🎓 Autori
 
 Razvijeno od strane [*Maplewood7*](https://github.com/Maplewood7), [*chora7*](https://github.com/chora7) i [*salveta96*](https://github.com/salveta96).
