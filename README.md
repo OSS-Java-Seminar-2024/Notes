@@ -44,11 +44,11 @@ Uz nju, mogli bismo jednostavno dodijeliti radnike zadacima, rezervirati prostor
 
 ## 📌 Zadaci
 
-[] Promijeniti bazu na engleski
-[] Promijeniti projekat na engleski?
-[] Preporučeno -> timestamp created_at & updated_at
-[] Detaljno pregledati projekat i testirati migracije
-[] User Management
+[] Promijeniti bazu na engleski  
+[] Promijeniti projekat na engleski?  
+[] Preporučeno -> timestamp created_at & updated_at  
+[] Detaljno pregledati projekat i testirati migracije  
+[] User Management  
 
 ## 🎓 Autori
 
