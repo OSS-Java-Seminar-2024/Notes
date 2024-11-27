@@ -82,17 +82,6 @@ CREATE TABLE Statuses (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Create the Performance_Audit table for historical tracking
-CREATE TABLE Performance_Audit (
-    Audit_ID CHAR(36) PRIMARY KEY,
-    Performance_ID CHAR(36),
-    Changed_By VARCHAR(50),
-    Change_Timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    Old_Value TEXT,
-    New_Value TEXT,
-    FOREIGN KEY (Performance_ID) REFERENCES Performances(Performance_ID)
-);
-
 -- Add foreign keys
 ALTER TABLE Performances 
     ADD CONSTRAINT FK_Performances_Locations FOREIGN KEY (Location_ID) REFERENCES Locations(Location_ID);
