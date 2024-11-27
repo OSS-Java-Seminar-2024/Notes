@@ -48,11 +48,11 @@ and up-to-date information, bringing more order and less stress to our projects.
 
 ## 📌 To-do
 
-[x] Promijeniti bazu na engleski  
-[x] Promijeniti projekat na engleski  
-[x] Preporučeno -> timestamp created_at & updated_at  
-[] Detaljno pregledati projekat i testirati migracije  
-[] User Management  
+- [x] Promijeniti bazu na engleski  
+- [x] Promijeniti projekat na engleski  
+- [x] Preporučeno -> timestamp created_at & updated_at  
+- [] Detaljno pregledati projekat i testirati migracije  
+- [] User Management  
 
 ## 🎓 Authors
 
