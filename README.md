@@ -1,59 +1,63 @@
-## 📝 O aplikaciji
+## 📝 About
 
 <div align="justify">
-Bilo da je riječ o dramskoj predstavi ili baletu, Teatar vam pruža interaktivno
-web sučelje za upravljanje kazališnim projektima. S lakoćom upravljajte sudionicima i
-efikasno dijelite informacije kako bi vaše izvedbe protekle u najboljem redu.
+Whether it’s a drama or a ballet, the Theater app offers you an interactive web interface
+for managing theater projects. Easily manage participants and efficiently share information
+to ensure your performances run smoothly. 
 </div>
 
 ## ⚙️ Značajke
 
-Administracija:  
-- objava projekta i upravljanje vidljivosti podataka  
-- dodavanje sudionika u projekt
-- dodjela projekata sudionicima  
-- raspored sudionika po odjelima 
-- određivanje uloge i specijalizacija sudionika  
-- pregled i promjena statusa sudionika  
-- upravljanje statusom projekta te uvid i izmjena statusa detalja  
-- kategoriziranje odjela i grupiranje sudionika  
-- određivanje izvedbi i uvid u status izvedbe  
-- označavanje pojedinih stadija projekta  
-- provjera dostupnosti i unos lokacija  
-- mogućnost proizvoljnog dijeljenja pojedinih informacija unutar tima  
-- mogućnost integracije s bazama podataka računovodstvom  
+Administration:
+- project publication and data visibility management
+- adding participants to the project
+- assigning projects to participants
+- assigning participants to departments
+- determining the role and specialization of participants
+- reviewing and changing participant status
+- managing project status and viewing and changing status details
+- categorizing departments and grouping participants
+- determining performances and viewing performance status
+- marking individual project stages
+- checking availability and entering locations
+- possibility of arbitrary sharing of individual information within the team
+- possibility of integration with accounting databases
 
-Radnici:  
-- obavijesti o dodjeli projekta
-- pregled aktivnih kazališnih projekata 
-- uvid u stanje i dostupnost lokacija
+Employees:
+- project assignment notifications
+- overview of active theater projects
+- insight into the status and availability of locations
 
 ### User Story 🗣️
 
 <div align="justify">
-  "U našem kazalištu svaki projekt uključuje mnogo ljudi, prostora i termina – od tehnike i scene, do umjetničkih timova. Sve to zahtijeva savršenu usklađenost i praćenje, što ponekad postane kaotično. Zato nam treba aplikacija koja će omogućiti da sve imamo na jednom mjestu.
-
-Uz nju, mogli bismo jednostavno dodijeliti radnike zadacima, rezervirati prostore prema potrebama i pratiti termine proba i izvedbi. Tako bi svi imali jasan pregled i ažurirane informacije, što bi našim projektima donijelo više reda i manje stresa."
+"In our theater, each project involves many people, spaces, and schedules—from technical
+and stage crews to artistic teams. All of this requires perfect coordination and
+tracking, which can sometimes become chaotic. That’s why we need an application that
+allows us to have everything in one place.  
+With it, we could easily assign workers to tasks, reserve spaces as needed, and track
+rehearsal and performance schedules. This way, everyone would have a clear overview
+and up-to-date information, bringing more order and less stress to our projects.
 </div>
 
-## 🗄️ Model baze
+## 🗄️ Database Model
 
 <div align="center">
-  <img src="dodaci/model_baze.png" alt="model baze" width="100%">
+  <img src="dodaci/database.jpeg" alt="model baze" width="100%">
 </div>
 
-## 📌 Zadaci
+## 📌 To-do
 
-[] Promijeniti bazu na engleski  
-[] Promijeniti projekat na engleski?  
-[] Preporučeno -> timestamp created_at & updated_at  
+[x] Promijeniti bazu na engleski  
+[x] Promijeniti projekat na engleski  
+[x] Preporučeno -> timestamp created_at & updated_at  
 [] Detaljno pregledati projekat i testirati migracije  
 [] User Management  
 
-## 🎓 Autori
+## 🎓 Authors
 
-Razvijeno od strane [*Maplewood7*](https://github.com/Maplewood7), [*chora7*](https://github.com/chora7) i [*salveta96*](https://github.com/salveta96).
+Developed by [*Maplewood7*](https://github.com/Maplewood7), [*chora7*](https://github.com/chora7) and [*salveta96*](https://github.com/salveta96).
 
-## ⚖️  Licenca
+## ⚖️  License
 
-Za više informacija posjetite [LICENSE](LICENSE) datoteku.
+Teatar is MIT-licensed. For more information check the [LICENSE](LICENSE) file.

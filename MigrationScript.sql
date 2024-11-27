@@ -4,7 +4,7 @@ USE Theatre;
 
 -- Create the Performances table with UUID as primary key
 CREATE TABLE Performances (
-    Performance_ID CHAR(36) PRIMARY KEY,
+    Performance_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
     Project_ID CHAR(36) NOT NULL,
     Performance_Type VARCHAR(50),
     Performance_Status CHAR(36) NOT NULL, -- Links to Statuses table
@@ -20,7 +20,7 @@ CREATE TABLE Performances (
 
 -- Create the Locations table with UUID as primary key
 CREATE TABLE Locations (
-    Location_ID CHAR(36) PRIMARY KEY,
+    Location_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
     Location_Name VARCHAR(50) NOT NULL,
     Status VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -30,7 +30,7 @@ CREATE TABLE Locations (
 
 -- Create the Departments table with UUID as primary key
 CREATE TABLE Departments (
-    Department_ID CHAR(36) PRIMARY KEY,
+    Department_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
     Department_Name VARCHAR(50) NOT NULL,
     Category VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -40,7 +40,7 @@ CREATE TABLE Departments (
 
 -- Create the Projects table with UUID as primary key
 CREATE TABLE Projects (
-    Project_ID CHAR(36) PRIMARY KEY,
+    Project_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
     Department_ID CHAR(36) NOT NULL,
     Project_Name VARCHAR(50) NOT NULL,
     Project_Type VARCHAR(50),
@@ -54,7 +54,7 @@ CREATE TABLE Projects (
 
 -- Create the Employees table with UUID as primary key
 CREATE TABLE Employees (
-    Employee_ID CHAR(36) PRIMARY KEY,
+    Employee_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
     Department_ID CHAR(36) NOT NULL,
     First_Name VARCHAR(50) NOT NULL,
     Last_Name VARCHAR(50) NOT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE Employee_on_Project (
 
 -- Create the Statuses table with UUID as primary key
 CREATE TABLE Statuses (
-    Status_ID CHAR(36) PRIMARY KEY,
+    Status_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
     Status_Type VARCHAR(50), -- e.g., 'Performance', 'Project'
     Status_Name VARCHAR(50), -- e.g., 'Scheduled', 'Completed'
     Description TEXT,
@@ -113,7 +113,7 @@ CREATE INDEX idx_projects_department ON Projects (Department_ID);
 
 -- Optional: Controlled vocabulary for Specialization
 CREATE TABLE Specializations (
-    Specialization_ID CHAR(36) PRIMARY KEY,
+    Specialization_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
     Specialization_Name VARCHAR(50)
 );
 
