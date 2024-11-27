@@ -43,7 +43,7 @@ and up-to-date information, bringing more order and less stress to our projects.
 ## 🗄️ Database Model
 
 <div align="center">
-  <img src="dodaci/database.jpeg" alt="model baze" width="100%">
+  <img src="assets/database.jpeg" alt="database model" width="100%">
 </div>
 
 ## 📌 To-do
