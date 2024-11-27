@@ -6,7 +6,7 @@ for managing theater projects. Easily manage participants and efficiently share 
 to ensure your performances run smoothly. 
 </div>
 
-## ⚙️ Značajke
+## ⚙️ Features
 
 Administration:
 - project publication and data visibility management
