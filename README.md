@@ -34,7 +34,7 @@ Employees:
 "In our theater, each project involves many people, spaces, and schedules—from technical
 and stage crews to artistic teams. All of this requires perfect coordination and
 tracking, which can sometimes become chaotic. That’s why we need an application that
-allows us to have everything in one place.  
+allows us to have everything in one place.<br\>
 With it, we could easily assign workers to tasks, reserve spaces as needed, and track
 rehearsal and performance schedules. This way, everyone would have a clear overview
 and up-to-date information, bringing more order and less stress to our projects.
@@ -51,8 +51,8 @@ and up-to-date information, bringing more order and less stress to our projects.
 - [x] Promijeniti bazu na engleski  
 - [x] Promijeniti projekat na engleski  
 - [x] Preporučeno -> timestamp created_at & updated_at  
-- [] Detaljno pregledati projekat i testirati migracije  
-- [] User Management  
+- Detaljno pregledati projekat i testirati migracije  
+- User Management  
 
 ## 🎓 Authors
 
