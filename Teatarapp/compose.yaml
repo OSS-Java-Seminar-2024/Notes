@@ -14,8 +14,8 @@ services:
     networks:
       - mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=
+      - MYSQL_ROOT_PASSWORD=Ero3s#onogaSvijeta
+      - MYSQL_DATABASE=Theatre
 
 networks:
   employee-mysql:

@@ -8,7 +8,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String index() {
-        return "Welcome to Teatar app!";
+        return "Welcome to Theater app!";
     }
 
 }

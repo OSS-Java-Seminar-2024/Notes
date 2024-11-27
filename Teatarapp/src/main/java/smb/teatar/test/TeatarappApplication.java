@@ -11,7 +11,7 @@ public class TeatarappApplication {
 
 	@RequestMapping("/")
 	public String homePage() {
-		return "Hello from Teatar app!\n";
+		return "Hello from Theater app!\n";
 	}
 
 	public static void main(String[] args) {

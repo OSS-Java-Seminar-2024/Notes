@@ -1,0 +1,9 @@
+-- Create the Locations table with UUID as primary key
+CREATE TABLE Locations (
+    Location_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
+    Location_Name VARCHAR(50) NOT NULL,
+    Status VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL DEFAULT NULL
+);

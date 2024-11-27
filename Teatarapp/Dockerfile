@@ -1,10 +1,13 @@
-FROM openjdk:21
+FROM maven:3.9.9
 
 WORKDIR /app
 
-COPY ./target/Teatar-0.0.1-SNAPSHOT.jar /app
+COPY pom.xml .
 
-EXPOSE 8080
+RUN mvn package -DskipTests
 
-CMD ["java", "-jar", "Teatar-0.0.1-SNAPSHOT.jar"]
+FROM openjdk:21
 
+COPY --from=builder /app/target/*.jar app.jar
+
+CMD ["java", "-jar", "app.jar"]
