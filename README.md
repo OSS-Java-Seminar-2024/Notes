@@ -1,7 +1,7 @@
 ## 📝 About
 
 <div align="justify">
-Whether it’s a drama or a ballet, the Theater app offers you an interactive web interface
+Whether if it’s a drama or a ballet, the Theater app offers you an interactive web interface
 for managing theater projects. Easily manage participants and efficiently share information
 to ensure your performances run smoothly. 
 </div>
@@ -34,7 +34,8 @@ Employees:
 "In our theater, each project involves many people, spaces, and schedules—from technical
 and stage crews to artistic teams. All of this requires perfect coordination and
 tracking, which can sometimes become chaotic. That’s why we need an application that
-allows us to have everything in one place.<br\>
+allows us to have everything in one place.  
+
 With it, we could easily assign workers to tasks, reserve spaces as needed, and track
 rehearsal and performance schedules. This way, everyone would have a clear overview
 and up-to-date information, bringing more order and less stress to our projects.
