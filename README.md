@@ -53,8 +53,10 @@ and up-to-date information, bringing more order and less stress to our projects.
 - [x] Promijeniti projekat na engleski  
 - [x] Preporučeno -> timestamp created_at & updated_at  
 - [x] Detaljno pregledati projekat i testirati migracije  
+- [x] Naming convention for the database
+- Logisticirati 'departments' tablicu
 - Napisati Dockerfile i compose.yaml
-- User Management  
+- User Management -> razdvajanje modela
 
 ## 🎓 Authors
 

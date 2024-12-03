@@ -1,122 +1,126 @@
--- Enable the Theatre database
+-- Naming convention: Database name is capitalized while table names and attributes are written
+-- in lower case. Table names are singular. For seperating words underscore is used. Reserved words
+-- used for attriburte names go as follows CONCAT(LOWER(reserved_word), '_');
+-- All primary keys are named 'id' and foregin keys go as follows 'CONCAT('table_name', '_id');
+-- As for the dates, the name describes what the date represents. --
+
+-- Creating Theatre database --
+DROP DATABASE IF EXISTS Theatre;
 CREATE DATABASE Theatre;
 USE Theatre;
 
--- Create the Performances table with UUID as primary key
-CREATE TABLE Performances (
-    Performance_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
-    Project_ID CHAR(36) NOT NULL,
-    Performance_Type VARCHAR(50),
-    Performance_Status CHAR(36) NOT NULL, -- Links to Statuses table
-    Date DATE NOT NULL,
-    Start_Time TIME NOT NULL,
-    Duration CHAR(10) CHECK (Duration REGEXP '^[0-9]{2}:[0-9]{2}$'),
-    Location_ID CHAR(36) NOT NULL,
+-- Creating tables --
+CREATE TABLE performances (
+    id INT NOT NULL AUTO_INCREMENT,
+    type_ VARCHAR(50),
+    date_time DATE NOT NULL,
+    duration CHAR(10) CHECK (duration REGEXP '^[0-9]{2}:[0-9]{2}$'),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deleted_at TIMESTAMP NULL DEFAULT NULL,
-    CONSTRAINT Unique_Performance UNIQUE (Date, Start_Time, Location_ID)
+    PRIMARY KEY (id)
 );
 
--- Create the Locations table with UUID as primary key
-CREATE TABLE Locations (
-    Location_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
-    Location_Name VARCHAR(50) NOT NULL,
-    Status VARCHAR(50),
+CREATE TABLE locations (
+    id int NOT NULL AUTO_INCREMENT,
+    name_ VARCHAR(50) NOT NULL,
+    status_ VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    deleted_at TIMESTAMP NULL DEFAULT NULL
+    deleted_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id)
 );
 
--- Create the Departments table with UUID as primary key
-CREATE TABLE Departments (
-    Department_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
-    Department_Name VARCHAR(50) NOT NULL,
-    Category VARCHAR(50),
+CREATE TABLE departments (
+    id int NOT NULL AUTO_INCREMENT,
+    name_ VARCHAR(50) NOT NULL,
+    category VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    deleted_at TIMESTAMP NULL DEFAULT NULL
+    deleted_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id)
 );
 
--- Create the Projects table with UUID as primary key
-CREATE TABLE Projects (
-    Project_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
-    Department_ID CHAR(36) NOT NULL,
-    Project_Name VARCHAR(50) NOT NULL,
-    Project_Type VARCHAR(50),
-    Project_Status CHAR(36) NOT NULL, -- Links to Statuses table
-    Start_Date DATE,
-    Description TEXT,
+CREATE TABLE projects (
+    id INT NOT NULL AUTO_INCREMENT,
+    department_id CHAR(40) NOT NULL,
+    name_ VARCHAR(50) NOT NULL,
+    type_ VARCHAR(50),
+    status_ CHAR(40) NOT NULL,
+    start_date DATE,
+    description_ TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    deleted_at TIMESTAMP NULL DEFAULT NULL
+    deleted_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id)
 );
 
--- Create the Employees table with UUID as primary key
-CREATE TABLE Employees (
-    Employee_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
-    Department_ID CHAR(36) NOT NULL,
-    First_Name VARCHAR(50) NOT NULL,
-    Last_Name VARCHAR(50) NOT NULL,
-    Status VARCHAR(50) DEFAULT 'Active',
-    Specialization VARCHAR(50),
+CREATE TABLE employees (
+    id INT NOT NULL AUTO_INCREMENT,
+    department_id CHAR(40) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    status_ VARCHAR(50) DEFAULT 'Active',
+    specialization VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    deleted_at TIMESTAMP NULL DEFAULT NULL
+    deleted_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id)
 );
 
--- Create the Employee_on_Project table
-CREATE TABLE Employee_on_Project (
-    Employee_ID CHAR(36) NOT NULL,
-    Project_ID CHAR(36) NOT NULL,
-    PRIMARY KEY (Employee_ID, Project_ID)
+CREATE TABLE employee_on_project (
+    employee_id INT NOT NULL,
+    project_id INT NOT NULL,
+    PRIMARY KEY (employee_id, project_id)
 );
 
--- Create the Statuses table with UUID as primary key
-CREATE TABLE Statuses (
-    Status_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
-    Status_Type VARCHAR(50), -- e.g., 'Performance', 'Project'
-    Status_Name VARCHAR(50), -- e.g., 'Scheduled', 'Completed'
-    Description TEXT,
+CREATE TABLE statuses (
+    id INT NOT NULL AUTO_INCREMENT,
+    type_ VARCHAR(50), -- e.g., 'Performance', 'Project'
+    name_ VARCHAR(50), -- e.g., 'Scheduled', 'Completed'
+    description_ TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
 );
 
--- Add foreign keys
-ALTER TABLE Performances 
-    ADD CONSTRAINT FK_Performances_Locations FOREIGN KEY (Location_ID) REFERENCES Locations(Location_ID);
+-- Adding foreign keys for table 'performances'
+ALTER TABLE performances ADD COLUMN project_id INT NOT NULL DEFAULT 0;
+ALTER TABLE performances
+	ADD FOREIGN KEY (project_id) REFERENCES projects(id);
+    
+ALTER TABLE performances ADD COLUMN status_id INT NOT NULL DEFAULT 0;
+ALTER TABLE performances
+	ADD FOREIGN KEY (status_id) REFERENCES statuses(id);
 
-ALTER TABLE Performances 
-    ADD CONSTRAINT FK_Performances_Projects FOREIGN KEY (Project_ID) REFERENCES Projects(Project_ID);
+ALTER TABLE performances ADD COLUMN location_id INT NOT NULL DEFAULT 0;
+ALTER TABLE performances
+	ADD FOREIGN KEY (location_id) REFERENCES locations(id);
 
-ALTER TABLE Performances 
-    ADD CONSTRAINT FK_Performances_Status FOREIGN KEY (Performance_Status) REFERENCES Statuses(Status_ID);
+-- Adding foreign keys for table 'performances'
+ALTER TABLE projects ADD COLUMN status_id INT NOT NULL DEFAULT 0;
+ALTER TABLE projects
+	ADD FOREIGN KEY (status_id) REFERENCES locations(id);
 
-ALTER TABLE Projects 
-    ADD CONSTRAINT FK_Projects_Departments FOREIGN KEY (Department_ID) REFERENCES Departments(Department_ID);
-
-ALTER TABLE Projects 
-    ADD CONSTRAINT FK_Projects_Status FOREIGN KEY (Project_Status) REFERENCES Statuses(Status_ID);
-
-ALTER TABLE Employees 
-    ADD CONSTRAINT FK_Employees_Departments FOREIGN KEY (Department_ID) REFERENCES Departments(Department_ID);
-
-ALTER TABLE Employee_on_Project 
-    ADD CONSTRAINT FK_Employee_on_Project_Projects FOREIGN KEY (Project_ID) REFERENCES Projects(Project_ID);
-
-ALTER TABLE Employee_on_Project 
-    ADD CONSTRAINT FK_Employee_on_Project_Employees FOREIGN KEY (Employee_ID) REFERENCES Employees(Employee_ID);
-
--- Indexes for frequently queried fields
-CREATE INDEX idx_performances_date_status ON Performances (Date, Performance_Status);
-CREATE INDEX idx_projects_department ON Projects (Department_ID);
-
--- Optional: Controlled vocabulary for Specialization
-CREATE TABLE Specializations (
-    Specialization_ID CHAR(36) PRIMARY KEY AUTO_INCREMENT,
-    Specialization_Name VARCHAR(50)
-);
-
-ALTER TABLE Employees 
-    ADD Specialization_ID CHAR(36),
-    ADD CONSTRAINT FK_Employees_Specializations FOREIGN KEY (Specialization_ID) REFERENCES Specializations(Specialization_ID);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
