@@ -12,10 +12,11 @@ USE Theatre;
 -- Creating tables --
 CREATE TABLE performances (
 	id INT NOT NULL AUTO_INCREMENT,
-    status_id INT NOT NULL,
+    status_ INT NOT NULL,
     location_id INT NOT NULL,
     project_id INT NOT NULL,
     type_ VARCHAR(50),
+    description_ TEXT,
     date_time DATE NOT NULL,
     duration TIME,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -25,10 +26,9 @@ CREATE TABLE performances (
 
 CREATE TABLE projects (
     id INT NOT NULL AUTO_INCREMENT,
-    status_id INT NOT NULL,
     name_ VARCHAR(50) NOT NULL,
     type_ VARCHAR(50),
-    status_ CHAR(40) NOT NULL,
+    status_ INT NOT NULL,
     start_date DATE,
     description_ TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -53,11 +53,8 @@ CREATE TABLE employees (
 
 CREATE TABLE statuses (
     id INT NOT NULL AUTO_INCREMENT,
-    type_ VARCHAR(50), -- e.g., 'Performance', 'Project'
-    name_ VARCHAR(50), -- e.g., 'Scheduled', 'Completed'
+    type_ ENUM('consulting', 'planning', 'building', 'implementing') DEFAULT 'consulting',
     description_ TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 );
 
@@ -72,7 +69,6 @@ CREATE TABLE employee_on_project (
 CREATE TABLE locations (
     id int NOT NULL AUTO_INCREMENT,
     name_ VARCHAR(50) NOT NULL,
-    status_ VARCHAR(50),
     PRIMARY KEY (id)
 );
 
@@ -88,7 +84,7 @@ ALTER TABLE performances ADD CONSTRAINT fk_project
  FOREIGN KEY (project_id) REFERENCES projects(id);
     
 ALTER TABLE performances ADD CONSTRAINT fk_performance_status
-	FOREIGN KEY (status_id) REFERENCES statuses(id);
+	FOREIGN KEY (status_) REFERENCES statuses(id);
 
 ALTER TABLE performances ADD CONSTRAINT fk_location
 	FOREIGN KEY (location_id) REFERENCES locations(id);
@@ -99,4 +95,4 @@ ALTER TABLE employees ADD CONSTRAINT fk_department
 
 -- Adding foreign keys for table 'projects'
 ALTER TABLE projects ADD CONSTRAINT fk_project_status
-	FOREIGN KEY (status_id) REFERENCES statuses(id);
+	FOREIGN KEY (status_) REFERENCES statuses(id);
