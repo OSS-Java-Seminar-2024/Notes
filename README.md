@@ -44,19 +44,17 @@ and up-to-date information, bringing more order and less stress to our projects.
 ## 🗄️ Database Model
 
 <div align="center">
-  <img src="assets/database.jpeg" alt="database model" width="100%">
+  <img src="./TheatreDatabase.png" alt="database" width="100%">
 </div>
 
 ## 📌 To-do
 
-- [x] Promijeniti bazu na engleski  
-- [x] Promijeniti projekat na engleski  
-- [x] Preporučeno -> timestamp created_at & updated_at  
-- [x] Detaljno pregledati projekat i testirati migracije  
+- [x] Translate project and database to english
+- [x] Add timestamps
+- [x] Set up SpringBoot project and test Migrations
 - [x] Naming convention for the database
-- Logisticirati 'departments' tablicu
-- Napisati Dockerfile i compose.yaml
-- User Management -> razdvajanje modela
+- Write Dockerfile and compose.yml
+- User Management -> model separation
 
 ## 🎓 Authors
 
