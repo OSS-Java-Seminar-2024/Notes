@@ -26,7 +26,7 @@ Administration:
 Employees:
 - project assignment notifications
 - overview of active theater projects
-- insight into the status and availability of locations
+- insight into the status and availability of locations 
 
 ### User Story 🗣️
 
