@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest # Use the latest MySQL image from Docker Hub
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: MySql@1234
+      MYSQL_DATABASE: Theatre
+    ports:
+      - "3306:3306" # Expose MySQL port to the host machine
+    volumes:
+      - mysql-data:/var/lib/mysql # Persist MySQL data in a Docker volume
+    networks:
+      - mysql-network
+
+volumes:
+  mysql-data: # Volume for MySQL data persistence
+
+networks:
+  mysql-network: # Custom network for the MySQL container
+    driver: bridge

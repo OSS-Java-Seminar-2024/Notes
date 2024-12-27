@@ -53,6 +53,8 @@ and up-to-date information, bringing more order and less stress to our projects.
 - [x] Add timestamps
 - [x] Set up SpringBoot project and test Migrations
 - [x] Naming convention for the database
+- mysql Docker database
+- pull instructions for Docker database
 - Write Dockerfile and compose.yml
 - User Management -> model separation
 

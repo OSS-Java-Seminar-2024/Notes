@@ -1,0 +1,1 @@
+INSERT INTO employee (username, email, first_name, last_name) VALUES ('user', 'user@email.com', 'User', 'Demo');
