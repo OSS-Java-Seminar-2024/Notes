@@ -1,7 +1,7 @@
 package com.smb.theatre.service;
 
 import com.smb.theatre.entity.Performance;
-import com.smb.theatre.exception.EmployeeNotFoundException;
+import com.smb.theatre.exception.EmployeeNotFound;
 import com.smb.theatre.repository.PerformanceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,12 +20,12 @@ public class PerformanceService {
 
     public Performance getPerformance(Long id) {
         return performanceRepository.findById(id).orElseThrow(() ->
-                new EmployeeNotFoundException("Performance with id " + id + " not found."));
+                new EmployeeNotFound("Performance with id " + id + " not found."));
     }
 
     public void deleteById(Long id) {
         performanceRepository.findById(id).orElseThrow(() ->
-                new EmployeeNotFoundException("Performance with ID " + id + " not found"));
+                new EmployeeNotFound("Performance with ID " + id + " not found"));
         performanceRepository.deleteById(id);
     }
 
