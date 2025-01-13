@@ -1,15 +1,14 @@
-package com.smb.theatre.service;
+package com.smb.theatre.service.implementations;
 
 import com.smb.theatre.entity.Department;
 import com.smb.theatre.exception.EmployeeNotFound;
 import com.smb.theatre.repository.DepartmentRepository;
+import com.smb.theatre.service.interfaces.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class DepartmentService {
+public class DepartmentServiceImpl implements DepartmentService {
 
     @Autowired
     private DepartmentRepository departmentRepository;

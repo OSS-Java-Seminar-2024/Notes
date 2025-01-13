@@ -17,6 +17,7 @@ public class Employee {
 
     private String username;
     private String email;
+    private String mobile;
     private String passwordHash;
     private String firstName;
     private String lastName;

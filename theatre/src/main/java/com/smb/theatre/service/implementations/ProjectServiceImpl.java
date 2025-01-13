@@ -1,15 +1,14 @@
-package com.smb.theatre.service;
+package com.smb.theatre.service.implementations;
 
 import com.smb.theatre.entity.Project;
 import com.smb.theatre.exception.EmployeeNotFound;
 import com.smb.theatre.repository.ProjectRepository;
+import com.smb.theatre.service.interfaces.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class ProjectService {
+public class ProjectServiceImpl implements ProjectService {
 
     @Autowired
     private ProjectRepository projectRepository;

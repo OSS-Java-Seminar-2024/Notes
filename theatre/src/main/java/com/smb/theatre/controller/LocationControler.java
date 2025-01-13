@@ -1,7 +1,7 @@
 package com.smb.theatre.controller;
 
 import com.smb.theatre.entity.Location;
-import com.smb.theatre.service.LocationService;
+import com.smb.theatre.service.interfaces.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

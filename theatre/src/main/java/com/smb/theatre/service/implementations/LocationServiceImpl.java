@@ -1,15 +1,15 @@
-package com.smb.theatre.service;
+package com.smb.theatre.service.implementations;
 
 import com.smb.theatre.entity.Location;
 import com.smb.theatre.exception.EmployeeNotFound;
 import com.smb.theatre.repository.LocationRepository;
+import com.smb.theatre.service.interfaces.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class LocationService {
+
+public class LocationServiceImpl implements LocationService {
 
     @Autowired
     private LocationRepository locationRepository;

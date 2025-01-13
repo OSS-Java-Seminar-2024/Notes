@@ -1,6 +1,6 @@
 package com.smb.theatre.controller;
 
-import com.smb.theatre.service.EmployeeService;
+import com.smb.theatre.service.interfaces.EmployeeService;
 import com.smb.theatre.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,7 +28,7 @@ public class EmployeeControler {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Employee> deleteEmployee(@PathVariable Long id) {
-        Employee employee = employeeService.deleteEmoployeeById(id);
+        Employee employee = employeeService.deleteEmployeeById(id);
         return new ResponseEntity<>(employee, HttpStatus.OK);
     }
 }

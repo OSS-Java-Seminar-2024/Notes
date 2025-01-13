@@ -1,7 +1,7 @@
 package com.smb.theatre.controller;
 
 import com.smb.theatre.entity.Project;
-import com.smb.theatre.service.ProjectService;
+import com.smb.theatre.service.interfaces.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

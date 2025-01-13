@@ -38,6 +38,7 @@ CREATE TABLE employee (
     project_id INT,
     username VARCHAR(30),
     email VARCHAR(60),
+    mobile VARCHAR(15),
     password_hash VARCHAR(64),
     first_name VARCHAR(30),
     last_name VARCHAR(30),
