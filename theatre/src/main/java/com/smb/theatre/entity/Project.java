@@ -1,6 +1,5 @@
 package com.smb.theatre.entity;
 
-import com.smb.theatre.entity.enums.PerformanceStatus;
 import com.smb.theatre.entity.enums.ProjectStatus;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -30,14 +29,7 @@ public class Project {
     @Enumerated(EnumType.STRING)
     private ProjectStatus projectStatus;
 
-    LocalDateTime created_at;
-    LocalDateTime updated_at;
-    LocalDateTime deleted_at;
-
-    Project () {}
-
-    @Override
-    public String toString () {
-        return "[name= " + name + "type= " + type + "description= " + description + "created_at= " + created_at + "]";
-    }
+    LocalDateTime createdAt;
+    LocalDateTime updatedAt;
+    LocalDateTime deletedAt;
 }

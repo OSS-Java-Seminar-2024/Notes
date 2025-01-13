@@ -19,11 +19,4 @@ public class Department {
 
     @OneToMany(mappedBy = "department")
     private List<Employee> employeeList;
-
-    Department () {}
-
-    @Override
-    public String toString () {
-        return "[name= " + name + "category= " + category + "]";
-    }
 }

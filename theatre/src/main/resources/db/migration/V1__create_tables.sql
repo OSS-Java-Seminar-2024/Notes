@@ -1,9 +1,4 @@
 
--- Creating Theatre database --
-DROP DATABASE IF EXISTS Theatre;
-CREATE DATABASE Theatre;
-USE Theatre;
-
 -- Creating tables --
 CREATE TABLE performance (
 	id INT NOT NULL AUTO_INCREMENT,
@@ -15,8 +10,8 @@ CREATE TABLE performance (
     date_time DATE,
     duration TIME,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (id)
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE project (
@@ -27,7 +22,7 @@ CREATE TABLE project (
     start_date DATETIME,
     description TEXT,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deleted_at DATETIME,
     PRIMARY KEY (id)
 );
@@ -44,7 +39,7 @@ CREATE TABLE employee (
     status VARCHAR(10),
     specialization VARCHAR(10),
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deleted_at DATETIME,
     PRIMARY KEY (id)
 );
@@ -63,10 +58,3 @@ CREATE TABLE department (
     category VARCHAR(50),
     PRIMARY KEY (id)
 );
-
-ALTER TABLE performance ADD FOREIGN KEY (project_id) REFERENCES project(id);
-ALTER TABLE performance ADD FOREIGN KEY (location_id) REFERENCES location(id);
-
-ALTER TABLE employee ADD FOREIGN KEY (project_id) REFERENCES project(id);
-ALTER TABLE employee ADD FOREIGN KEY (department_id) REFERENCES department(id);
-

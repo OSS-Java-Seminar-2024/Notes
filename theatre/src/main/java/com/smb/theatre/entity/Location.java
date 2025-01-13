@@ -21,10 +21,4 @@ public class Location {
     @OneToMany(mappedBy = "location")
     private List<Performance> performanceList;
 
-    Location () {}
-
-    @Override
-    public String toString () {
-        return "[country= " + country + "city= " + city + "address= " + address + "]";
-    }
 }

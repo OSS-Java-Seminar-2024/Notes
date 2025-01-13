@@ -35,13 +35,6 @@ public class Performance {
     @JoinColumn(name = "location_id", insertable = false, updatable = false)
     private Location location;
 
-    private LocalDateTime created_at;
-    private LocalDateTime updated_at;
-
-    Performance () {}
-
-    @Override
-    public String toString () {
-        return "[description= " + description + "dateTime= " + dateTime + "duration= " + duration + "]";
-    }
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }
