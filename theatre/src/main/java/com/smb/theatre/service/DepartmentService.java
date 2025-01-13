@@ -18,18 +18,20 @@ public class DepartmentService {
         return departmentRepository.save(department);
     }
 
-    public Department getDepartment(Long id) {
+    public Department getDepartmentById(Long id) {
         return departmentRepository.findById(id).orElseThrow(() ->
                 new EmployeeNotFound("Department with id " + id + " not found."));
     }
 
-    public void deleteById(Long id) {
+    // ovdje je potrebno popraviti return vrijednost (pogledaj DepartmentController)
+    public Department deleteDepartmentById(Long id) {
         departmentRepository.findById(id).orElseThrow(() ->
                 new EmployeeNotFound("Performance with ID " + id + " not found"));
         departmentRepository.deleteById(id);
+        return null;
     }
 
-    public List<Department> getAllProjects() {
+    public List<Department> getAllDepartments() {
         return departmentRepository.findAll();
     }
 }

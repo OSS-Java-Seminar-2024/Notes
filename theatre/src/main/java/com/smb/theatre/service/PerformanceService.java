@@ -18,18 +18,20 @@ public class PerformanceService {
         return performanceRepository.save(performance);
     }
 
-    public Performance getPerformance(Long id) {
+    public Performance getPerformanceById(Long id) {
         return performanceRepository.findById(id).orElseThrow(() ->
                 new EmployeeNotFound("Performance with id " + id + " not found."));
     }
 
-    public void deleteById(Long id) {
+    // ovdje je potrebno popraviti return vrijednost (pogledaj PerformancesControler)
+    public Performance deletePerformanceById(Long id) {
         performanceRepository.findById(id).orElseThrow(() ->
                 new EmployeeNotFound("Performance with ID " + id + " not found"));
         performanceRepository.deleteById(id);
+        return null;
     }
 
-    public List<Performance> getAllProjects() {
+    public List<Performance> getAllPerformances() {
         return performanceRepository.findAll();
     }
 }

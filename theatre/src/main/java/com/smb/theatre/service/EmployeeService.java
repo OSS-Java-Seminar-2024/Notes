@@ -18,18 +18,16 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
-    public Employee getEmployee(Long id) {
+    public Employee getEmployeeById(Long id) {
         return employeeRepository.findById(id).orElseThrow(() ->
                 new EmployeeNotFound("Employee with id " + id + " not found."));
     }
 
-    public void deleteById(Long id) {
+    // ovdje je potrebno popraviti return vrijednost (pogledaj EmployeeControler)
+    public Employee deleteEmoployeeById(Long id) {
         employeeRepository.findById(id).orElseThrow(() ->
                 new EmployeeNotFound("Employee with ID " + id + " not found"));
         employeeRepository.deleteById(id);
-    }
-
-    public List<Employee> getAllEmployees() {
-        return employeeRepository.findAll();
+        return null;
     }
 }

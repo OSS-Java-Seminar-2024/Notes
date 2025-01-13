@@ -18,15 +18,17 @@ public class LocationService {
         return locationRepository.save(location);
     }
 
-    public Location getLocation(Long id) {
+    public Location getLocationById(Long id) {
         return locationRepository.findById(id).orElseThrow(() ->
                 new EmployeeNotFound("Location with id " + id + " not found."));
     }
 
-    public void deleteById(Long id) {
+    // ovdje je potrebno popraviti return vrijednost (pogledaj LocationControler)
+    public Location deleteLocationById(Long id) {
         locationRepository.findById(id).orElseThrow(() ->
                 new EmployeeNotFound("Location with ID " + id + " not found"));
         locationRepository.deleteById(id);
+        return null;
     }
 
     public List<Location> getAllLocations() {

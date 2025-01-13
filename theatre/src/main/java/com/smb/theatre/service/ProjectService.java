@@ -18,15 +18,17 @@ public class ProjectService {
         return projectRepository.save(project);
     }
 
-    public Project getProject(Long id) {
+    public Project getProjectById(Long id) {
         return (Project) projectRepository.findById(id).orElseThrow(() ->
                 new EmployeeNotFound("Project with id " + id + " not found."));
     }
 
-    public void deleteById(Long id) {
+    // ovdje je potrebno popraviti return vrijednost (pogledaj ProjectControler)
+    public Project deleteProjectById(Long id) {
         projectRepository.findById(id).orElseThrow(() ->
                 new EmployeeNotFound("Project with ID " + id + " not found"));
         projectRepository.deleteById(id);
+        return null;
     }
 
     public List<Project> getAllProjects() {

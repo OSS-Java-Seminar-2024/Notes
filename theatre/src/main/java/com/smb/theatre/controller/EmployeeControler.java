@@ -7,8 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/employees")
 public class EmployeeControler {
@@ -23,14 +21,14 @@ public class EmployeeControler {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id) {
-        Employee employee = employeeService.getEmployee(id);
-        return new ResponseEntity<>(employee, HttpStatus.OK);
+    public ResponseEntity<Employee> getEmployee(@PathVariable Long id) {
+        Employee employee = employeeService.getEmployeeById(id);
+        return new ResponseEntity<>(employee, HttpStatus.FOUND);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteEmployee(@PathVariable Long id) {
-        employeeService.deleteById(id);
-        return ResponseEntity.noContent().build();
+    public ResponseEntity<Employee> deleteEmployee(@PathVariable Long id) {
+        Employee employee = employeeService.deleteEmoployeeById(id);
+        return new ResponseEntity<>(employee, HttpStatus.OK);
     }
 }
