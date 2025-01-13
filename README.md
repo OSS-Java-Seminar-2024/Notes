@@ -44,7 +44,7 @@ and up-to-date information, bringing more order and less stress to our projects.
 ## 🗄️ Database Model
 
 <div align="center">
-  <img src="./Database.png" alt="database" width="100%">
+  <img src="./probna.jpeg" alt="database" width="100%">
 </div>
 
 ## 📌 To-do

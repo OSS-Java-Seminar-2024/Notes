@@ -12,12 +12,11 @@ USE Theatre;
 -- Creating tables --
 CREATE TABLE performance (
 	id INT NOT NULL AUTO_INCREMENT,
-    status_ INT NOT NULL,
-    location_id INT NOT NULL,
-    project_id INT NOT NULL,
-    type_ VARCHAR(50),
+	status_ ENUM('consulting', 'planning', 'building', 'implementing') DEFAULT 'consulting',
+    type_ ENUM('play', 'concert', 'opera', 'dance') DEFAULT 'play',
     description_ TEXT,
-    date_time DATE NOT NULL,
+    date_time DATE,
+    location VARCHAR(40),
     duration TIME,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -26,76 +25,44 @@ CREATE TABLE performance (
 
 CREATE TABLE project (
     id INT NOT NULL AUTO_INCREMENT,
-    name_ VARCHAR(50) NOT NULL,
+    name_ VARCHAR(50),
     type_ VARCHAR(50),
-    status_ INT NOT NULL,
-    start_date DATE,
+    status_ ENUM('planned', 'in_progrss', 'completed', 'canceled') DEFAULT 'planned',
+    start_date DATETIME,
     description_ TEXT,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    deleted_at DATETIME NULL DEFAULT NULL,
+    deleted_at DATETIME,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE employee (
     id INT NOT NULL AUTO_INCREMENT,
-    username VARCHAR(30) NOT NULL,
-    email VARCHAR(120) NOT NULL,
+    username VARCHAR(30),
+    email VARCHAR(120),
     password_hash VARCHAR(64),
-    first_name VARCHAR(50) NOT NULL,
-    last_name VARCHAR(50) NOT NULL,
-	department_id INT,
-    status_ ENUM('active', 'retired', 'busy', 'unavailable') DEFAULT 'active',
-    specialization ENUM('director', 'producer', 'composer', 'choreographer',
-    'musician', 'stage manager', 'head of light', 'stage crew'),
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    status_ ENUM('active', 'inactive', 'suspended') DEFAULT 'active',
+    specialization ENUM('actor', 'director', 'technician', 'stuff'),
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    deleted_at DATETIME NULL DEFAULT NULL,
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE statuse (
-    id INT NOT NULL AUTO_INCREMENT,
-    type_ ENUM('consulting', 'planning', 'building', 'implementing') DEFAULT 'consulting',
-    description_ TEXT,
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE employee_on_project (
-    employee_id INT NOT NULL,
-    project_id INT NOT NULL,
-    FOREIGN KEY fk_project (project_id) REFERENCES project(id),
-    FOREIGN KEY fk_employee (employee_id) REFERENCES employee(id),
-    PRIMARY KEY (employee_id, project_id)
-);
-
-CREATE TABLE location (
-    id INT NOT NULL AUTO_INCREMENT,
-    name_ VARCHAR(50) NOT NULL,
+    deleted_at DATETIME,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE department (
-    id INT AUTO_INCREMENT,
-    name_ VARCHAR(50) NOT NULL,
+    id INT NOT NULL AUTO_INCREMENT,
+    employee_id int,
+    name_ VARCHAR(50),
     category VARCHAR(50),
     PRIMARY KEY (id)
 );
 
--- Adding foreign keys for table 'performances'
-ALTER TABLE performance ADD CONSTRAINT fk_project
- FOREIGN KEY (project_id) REFERENCES project(id);
-    
-ALTER TABLE performance ADD CONSTRAINT fk_performance_status
-	FOREIGN KEY (status_) REFERENCES statuse(id);
-
-ALTER TABLE performance ADD CONSTRAINT fk_location
-	FOREIGN KEY (location_id) REFERENCES location(id);
-    
--- Adding foreign keys for table 'employees'
-ALTER TABLE employee ADD CONSTRAINT fk_department
-    FOREIGN KEY (department_id) REFERENCES department(id);
-
--- Adding foreign keys for table 'projects'
-ALTER TABLE project ADD CONSTRAINT fk_project_status
-	FOREIGN KEY (status_) REFERENCES statuse(id);
+CREATE TABLE location (
+	id INT NOT NULL AUTO_INCREMENT,
+    country VARCHAR(40),
+    city VARCHAR(40),
+    address VARCHAR(80),
+    PRIMARY KEY (id)
+);
