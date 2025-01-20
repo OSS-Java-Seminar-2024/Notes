@@ -1,14 +1,15 @@
 package com.smb.theatre.service.implementations;
 
-import com.smb.theatre.entity.Location;
-import com.smb.theatre.exception.EmployeeNotFound;
+import com.smb.theatre.model.Location;
+import com.smb.theatre.exception.UserNotFoundException;
 import com.smb.theatre.repository.LocationRepository;
 import com.smb.theatre.service.interfaces.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
+@Service
 public class LocationServiceImpl implements LocationService {
 
     @Autowired
@@ -20,13 +21,13 @@ public class LocationServiceImpl implements LocationService {
 
     public Location getLocationById(Long id) {
         return locationRepository.findById(id).orElseThrow(() ->
-                new EmployeeNotFound("Location with id " + id + " not found."));
+                new UserNotFoundException("Location with id " + id + " not found."));
     }
 
     // ovdje je potrebno popraviti return vrijednost (pogledaj LocationControler)
     public Location deleteLocationById(Long id) {
         locationRepository.findById(id).orElseThrow(() ->
-                new EmployeeNotFound("Location with ID " + id + " not found"));
+                new UserNotFoundException("Location with ID " + id + " not found"));
         locationRepository.deleteById(id);
         return null;
     }

@@ -1,6 +1,6 @@
-package com.smb.theatre.entity;
+package com.smb.theatre.model;
 
-import com.smb.theatre.entity.enums.ProjectStatus;
+import com.smb.theatre.model.enums.ProjectStatus;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -24,7 +24,7 @@ public class Project {
     private List<Performance> performanceList;
 
     @OneToMany
-    private List<Employee> employeeList;
+    private List<User> userList;
 
     @Enumerated(EnumType.STRING)
     private ProjectStatus projectStatus;

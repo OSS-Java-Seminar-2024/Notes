@@ -1,6 +1,6 @@
-package com.smb.theatre.controller;
+package com.smb.theatre.controller.models;
 
-import com.smb.theatre.entity.Project;
+import com.smb.theatre.model.Project;
 import com.smb.theatre.service.interfaces.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/projects")
-public class ProjectControler {
+public class ProjectController {
 
     @Autowired
     private ProjectService projectService;

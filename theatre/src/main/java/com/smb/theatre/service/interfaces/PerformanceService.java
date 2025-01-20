@@ -1,9 +1,11 @@
 package com.smb.theatre.service.interfaces;
 
-import com.smb.theatre.entity.Performance;
+import com.smb.theatre.model.Performance;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public interface PerformanceService {
 
     Performance createPerformance(Performance performance);

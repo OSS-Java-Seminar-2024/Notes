@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(EmployeeAlreadyExists.class)
-    public ResponseEntity<String> handleEmployeeAlreadyExists (EmployeeAlreadyExists ex) {
+    @ExceptionHandler(UserAlreadyExistsException.class)
+    public ResponseEntity<String> handleEmployeeAlreadyExists (UserAlreadyExistsException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
-    @ExceptionHandler(EmployeeNotFound.class)
-    public ResponseEntity<String> handleEmployeeNotFound (EmployeeNotFound ex) {
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResponseEntity<String> handleEmployeeNotFound (UserNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 }

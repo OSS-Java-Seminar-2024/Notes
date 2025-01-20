@@ -1,13 +1,15 @@
 package com.smb.theatre.service.implementations;
 
-import com.smb.theatre.entity.Department;
-import com.smb.theatre.exception.EmployeeNotFound;
+import com.smb.theatre.model.Department;
+import com.smb.theatre.exception.UserNotFoundException;
 import com.smb.theatre.repository.DepartmentRepository;
 import com.smb.theatre.service.interfaces.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class DepartmentServiceImpl implements DepartmentService {
 
     @Autowired
@@ -19,13 +21,13 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     public Department getDepartmentById(Long id) {
         return departmentRepository.findById(id).orElseThrow(() ->
-                new EmployeeNotFound("Department with id " + id + " not found."));
+                new UserNotFoundException("Department with id " + id + " not found."));
     }
 
     // ovdje je potrebno popraviti return vrijednost (pogledaj DepartmentController)
     public Department deleteDepartmentById(Long id) {
         departmentRepository.findById(id).orElseThrow(() ->
-                new EmployeeNotFound("Performance with ID " + id + " not found"));
+                new UserNotFoundException("Performance with ID " + id + " not found"));
         departmentRepository.deleteById(id);
         return null;
     }

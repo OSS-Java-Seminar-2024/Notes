@@ -1,4 +1,4 @@
-package com.smb.theatre.entity;
+package com.smb.theatre.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

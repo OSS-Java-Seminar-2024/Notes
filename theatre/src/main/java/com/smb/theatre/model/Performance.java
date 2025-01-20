@@ -1,7 +1,7 @@
-package com.smb.theatre.entity;
+package com.smb.theatre.model;
 
-import com.smb.theatre.entity.enums.PerformanceType;
-import com.smb.theatre.entity.enums.PerformanceStatus;
+import com.smb.theatre.model.enums.PerformanceType;
+import com.smb.theatre.model.enums.PerformanceStatus;
 import jakarta.persistence.*;
 import lombok.Data;
 

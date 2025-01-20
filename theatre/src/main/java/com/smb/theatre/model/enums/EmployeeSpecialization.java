@@ -1,4 +1,4 @@
-package com.smb.theatre.entity.enums;
+package com.smb.theatre.model.enums;
 
 public enum EmployeeSpecialization {
     ACTOR,

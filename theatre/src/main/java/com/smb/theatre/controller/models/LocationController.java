@@ -1,6 +1,6 @@
-package com.smb.theatre.controller;
+package com.smb.theatre.controller.models;
 
-import com.smb.theatre.entity.Location;
+import com.smb.theatre.model.Location;
 import com.smb.theatre.service.interfaces.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/locations")
-public class LocationControler {
+public class LocationController {
 
     @Autowired
     private LocationService locationService;
@@ -23,7 +23,7 @@ public class LocationControler {
     @GetMapping("/{id}")
     public ResponseEntity<Location> getLocation(@PathVariable Long id) {
         Location location = locationService.getLocationById(id);
-        return new ResponseEntity<>(location, HttpStatus.OK);
+        return new ResponseEntity<>(location, HttpStatus.FOUND);
     }
 
     @DeleteMapping("/{id}")

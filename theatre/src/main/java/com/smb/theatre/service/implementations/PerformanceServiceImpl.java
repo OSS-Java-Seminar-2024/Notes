@@ -1,7 +1,7 @@
 package com.smb.theatre.service.implementations;
 
-import com.smb.theatre.entity.Performance;
-import com.smb.theatre.exception.EmployeeNotFound;
+import com.smb.theatre.model.Performance;
+import com.smb.theatre.exception.UserNotFoundException;
 import com.smb.theatre.repository.PerformanceRepository;
 import com.smb.theatre.service.interfaces.PerformanceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +21,13 @@ public class PerformanceServiceImpl implements PerformanceService {
 
     public Performance getPerformanceById(Long id) {
         return performanceRepository.findById(id).orElseThrow(() ->
-                new EmployeeNotFound("Performance with id " + id + " not found."));
+                new UserNotFoundException("Performance with id " + id + " not found."));
     }
 
     // ovdje je potrebno popraviti return vrijednost (pogledaj PerformancesControler)
     public Performance deletePerformanceById(Long id) {
         performanceRepository.findById(id).orElseThrow(() ->
-                new EmployeeNotFound("Performance with ID " + id + " not found"));
+                new UserNotFoundException("Performance with ID " + id + " not found"));
         performanceRepository.deleteById(id);
         return null;
     }

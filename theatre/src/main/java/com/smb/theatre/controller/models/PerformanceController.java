@@ -1,6 +1,6 @@
-package com.smb.theatre.controller;
+package com.smb.theatre.controller.models;
 
-import com.smb.theatre.entity.Performance;
+import com.smb.theatre.model.Performance;
 import com.smb.theatre.service.interfaces.PerformanceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/performances")
-public class PerformanceControler {
+public class PerformanceController {
 
     @Autowired
     private PerformanceService performanceService;
@@ -29,6 +29,6 @@ public class PerformanceControler {
     @DeleteMapping("{id}")
     public ResponseEntity<Performance> deletePerformance(@PathVariable Long id) {
         Performance performance = performanceService.deletePerformanceById(id);
-        return new ResponseEntity<>(performance, HttpStatus.FOUND);
+        return new ResponseEntity<>(performance, HttpStatus.OK);
     }
 }

@@ -1,9 +1,11 @@
 package com.smb.theatre.service.interfaces;
 
-import com.smb.theatre.entity.Location;
+import com.smb.theatre.model.Location;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public interface LocationService {
 
     Location createLocation(Location location);
