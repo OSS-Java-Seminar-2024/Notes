@@ -1,73 +1,85 @@
 
 -- Creating Theatre database --
-DROP DATABASE IF EXISTS Theatre;
-CREATE DATABASE Theatre;
-USE Theatre;
+drop database if exists Theatre;
+create database Theatre;
+use Theatre;
 
--- Creating tables --
-CREATE TABLE performance (
-	id INT NOT NULL AUTO_INCREMENT,
-    project_id INT,
-    location_id INT,
-	status VARCHAR(10),
-    type VARCHAR(10),
-    description TEXT,
-    date_time DATE,
-    duration TIME,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (id)
+-- Creating table employee (user) --
+create table employee (
+    id int not null auto_increment,
+    username varchar(30) unique not null,
+    email varchar(60) unique not null,
+    mobile varchar(15) unique not null,
+    password_hash varchar(64) not null,
+    first_name varchar(30) not null,
+    last_name varchar(30) not null,
+    status varchar(10),
+    specialization varchar(10),
+    created_at datetime default current_timestamp,
+    updated_at datetime default current_timestamp,
+    deleted_at datetime,
+    
+    department_id int,
+    project_id int,
+    
+    primary key (id)
 );
 
-CREATE TABLE project (
-    id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(50),
-    type VARCHAR(10),
-    status VARCHAR(10),
-    start_date DATETIME,
-    description TEXT,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    deleted_at DATETIME,
-    PRIMARY KEY (id)
+-- Create table project --
+create table project (
+    id int not null auto_increment,
+    name varchar(50) unique not null,
+    type varchar(10),
+    status varchar(10),
+    start_date datetime,
+    description text,
+    created_at datetime default current_timestamp,
+    updated_at datetime default current_timestamp,
+    deleted_at datetime,
+    
+    primary key (id)
 );
 
-CREATE TABLE employee (
-    id INT NOT NULL AUTO_INCREMENT,
-    department_id INT,
-    project_id INT,
-    username VARCHAR(30),
-    email VARCHAR(60),
-    mobile VARCHAR(15),
-    password_hash VARCHAR(64),
-    first_name VARCHAR(30),
-    last_name VARCHAR(30),
-    status VARCHAR(10),
-    specialization VARCHAR(10),
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    deleted_at DATETIME,
-    PRIMARY KEY (id)
+-- Create table performance --
+create table performance (
+	id int not null auto_increment,
+	status varchar(10) not null,
+    type varchar(10),
+    description text,
+    date_time date,
+    duration time,
+    created_at datetime default current_timestamp,
+    updated_at datetime default current_timestamp,
+
+    project_id int,
+    location_id int,
+    
+	primary key (id)
 );
 
-CREATE TABLE location (
-	id INT NOT NULL AUTO_INCREMENT,
-    country VARCHAR(40),
-    city VARCHAR(40),
-    address VARCHAR(80),
-    PRIMARY KEY (id)
+-- Create table department --
+create table department (
+    id int not null auto_increment,
+    name varchar(50) unique not null,
+    category varchar(50),
+    
+    primary key (id)
 );
 
-CREATE TABLE department (
-    id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(50),
-    category VARCHAR(50),
-    PRIMARY KEY (id)
+-- Create table location --
+create table location (
+	id int not null auto_increment,
+    country varchar(40) not null,
+    city varchar(40) not null,
+    address varchar(80) not null,
+    
+    primary key (id)
 );
 
-ALTER TABLE performance ADD FOREIGN KEY (project_id) REFERENCES project(id);
-ALTER TABLE performance ADD FOREIGN KEY (location_id) REFERENCES location(id);
+-- Add foreign keys --
+alter table performance add foreign key (project_id) references project(id);
+alter table performance add foreign key (location_id) references location(id);
 
-ALTER TABLE employee ADD FOREIGN KEY (project_id) REFERENCES project(id);
-ALTER TABLE employee ADD FOREIGN KEY (department_id) REFERENCES department(id);
+alter table employee add foreign key (project_id) references project(id);
+alter table employee add foreign key (department_id) references department(id);
 

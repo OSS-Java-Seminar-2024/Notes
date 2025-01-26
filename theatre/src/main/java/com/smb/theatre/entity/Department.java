@@ -1,16 +1,12 @@
-package com.smb.theatre.model;
+package com.smb.theatre.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "department")
 public class Department {
 
@@ -18,9 +14,10 @@ public class Department {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "name", unique = true)
     private String name;
 
+    @Column(name = "category")
     private String category;
 
     @OneToMany(mappedBy = "department")

@@ -1,6 +1,6 @@
 package com.smb.theatre.service.interfaces;
 
-import com.smb.theatre.model.Location;
+import com.smb.theatre.entity.Location;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,11 +8,14 @@ import java.util.List;
 @Service
 public interface LocationService {
 
-    Location createLocation(Location location);
+    List<Location> findAll ();
 
-    Location getLocationById(Long id);
+    Location findById (Long id);
 
-    Location deleteLocationById(Long id);
+    void create (Location location);
 
-    List<Location> getAllLocations();
+    void update (Location location);
+
+    void delete (Long id);
+
 }

@@ -1,6 +1,6 @@
 package com.smb.theatre.repository;
 
-import com.smb.theatre.model.Project;
+import com.smb.theatre.entity.Project;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

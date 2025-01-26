@@ -1,4 +1,4 @@
-package com.smb.theatre.model.enums;
+package com.smb.theatre.entity.enums;
 
 public enum PerformanceStatus {
     CONSULTING,
