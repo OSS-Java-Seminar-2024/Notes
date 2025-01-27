@@ -27,9 +27,9 @@ public class LocationController {
     }
 
     @GetMapping("/locations/{id}")
-    public ResponseEntity<Void> getLocation (@PathVariable Long id) {
+    public ResponseEntity<Location> getLocation (@PathVariable Long id) {
         Location location = locationService.findById(id);
-        return new ResponseEntity<>(HttpStatus.FOUND);
+        return new ResponseEntity<>(location, HttpStatus.FOUND);
     }
 
     @PostMapping("/locations")

@@ -1,5 +1,6 @@
 package com.smb.theatre.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.smb.theatre.entity.enums.PerformanceType;
 import com.smb.theatre.entity.enums.PerformanceStatus;
 import jakarta.persistence.*;
@@ -15,7 +16,6 @@ import java.time.LocalDateTime;
 public class Performance {
 
     @Id
-    @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -45,9 +45,11 @@ public class Performance {
 
     @ManyToOne
     @JoinColumn(name = "project_id")
+    @JsonBackReference("project-performance-reference")
     private Project project;
 
     @ManyToOne
     @JoinColumn(name = "location_id")
+    @JsonBackReference("location-performance-reference")
     private Location location;
 }

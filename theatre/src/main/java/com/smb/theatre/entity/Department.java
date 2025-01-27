@@ -1,5 +1,7 @@
 package com.smb.theatre.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.smb.theatre.entity.enums.DepartmentCategory;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,8 +20,10 @@ public class Department {
     private String name;
 
     @Column(name = "category")
-    private String category;
+    @Enumerated(EnumType.STRING)
+    private DepartmentCategory category;
 
     @OneToMany(mappedBy = "department")
+    @JsonManagedReference("department-user-reference")
     private List<User> userList;
 }

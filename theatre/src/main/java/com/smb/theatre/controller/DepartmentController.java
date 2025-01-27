@@ -26,9 +26,9 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments/{id}")
-    public ResponseEntity<Void> getDepartments (@PathVariable Long id) {
+    public ResponseEntity<Department> getDepartments (@PathVariable Long id) {
         Department department = departmentService.findById(id);
-        return new ResponseEntity<>(HttpStatus.FOUND);
+        return new ResponseEntity<>(department, HttpStatus.FOUND);
     }
 
     @PostMapping("/departments")

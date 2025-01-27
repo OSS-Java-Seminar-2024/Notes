@@ -1,5 +1,7 @@
 package com.smb.theatre.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -28,5 +30,6 @@ public class Location {
     private String address;
 
     @OneToMany(mappedBy = "location")
+    @JsonManagedReference("location-performance-reference")
     private List<Performance> performanceList;
 }

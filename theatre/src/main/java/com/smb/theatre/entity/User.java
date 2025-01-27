@@ -1,4 +1,5 @@
 package com.smb.theatre.entity;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.smb.theatre.entity.enums.EmployeeStatus;
 
 import jakarta.persistence.*;
@@ -44,10 +45,12 @@ public class User {
     private EmployeeStatus status;
 
     @ManyToOne
+    @JsonBackReference("department-user-reference")
     @JoinColumn(name = "department_id")
     private Department department;
 
     @ManyToOne
+    @JsonBackReference("project-user-reference")
     @JoinColumn(name = "project_id")
     private Project project;
 

@@ -61,7 +61,7 @@ create table performance (
 create table department (
     id int not null auto_increment,
     name varchar(50) unique not null,
-    category varchar(50),
+    category varchar(10),
     
     primary key (id)
 );

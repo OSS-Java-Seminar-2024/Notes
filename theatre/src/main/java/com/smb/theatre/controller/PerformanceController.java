@@ -26,9 +26,9 @@ public class PerformanceController {
     }
 
     @GetMapping("/performances/{id}")
-    public ResponseEntity<Void> getPerformance (@PathVariable Long id) {
+    public ResponseEntity<Performance> getPerformance (@PathVariable Long id) {
         Performance performance = performanceService.findById(id);
-        return new ResponseEntity<>(HttpStatus.FOUND);
+        return new ResponseEntity<>(performance, HttpStatus.FOUND);
     }
 
     @PostMapping("/performances")

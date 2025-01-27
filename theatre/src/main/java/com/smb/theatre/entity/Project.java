@@ -1,5 +1,7 @@
 package com.smb.theatre.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.smb.theatre.entity.enums.ProjectStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -14,7 +16,6 @@ import java.util.List;
 public class Project {
 
     @Id
-    @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -45,8 +46,10 @@ public class Project {
     LocalDateTime deletedAt;
 
     @OneToMany(mappedBy = "project")
+    @JsonManagedReference("project-performance-reference")
     private List<Performance> performanceList;
 
     @OneToMany(mappedBy = "project")
+    @JsonManagedReference("project-user-reference")
     private List<User> userList;
 }

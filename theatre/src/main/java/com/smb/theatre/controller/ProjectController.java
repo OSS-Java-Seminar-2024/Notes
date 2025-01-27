@@ -1,7 +1,6 @@
 package com.smb.theatre.controller;
 
 import com.smb.theatre.entity.Project;
-import com.smb.theatre.entity.User;
 import com.smb.theatre.service.interfaces.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,9 +25,9 @@ public class ProjectController {
     }
 
     @GetMapping("/projects/{id}")
-    public ResponseEntity<Void> getProject (@PathVariable Long id) {
+    public ResponseEntity<Project> getProject (@PathVariable Long id) {
         Project project = projectService.findById(id);
-        return new ResponseEntity<>(HttpStatus.FOUND);
+        return new ResponseEntity<>(project, HttpStatus.FOUND);
     }
 
     @PostMapping("/projects")
@@ -43,8 +42,8 @@ public class ProjectController {
         Project updatedProject = projectService.findById(id);
 
         updatedProject.setName(project.getName());
-        updatedProject.setType(project.getType());
         updatedProject.setStartDate(project.getStartDate());
+        updatedProject.setType(project.getType());
 
         projectService.update(updatedProject);
 
