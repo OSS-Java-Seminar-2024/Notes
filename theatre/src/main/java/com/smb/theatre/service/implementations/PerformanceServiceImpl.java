@@ -1,10 +1,9 @@
 package com.smb.theatre.service.implementations;
 
-import com.smb.theatre.entity.Performance;
+import com.smb.theatre.model.Performance;
 import com.smb.theatre.exception.NotFoundException;
 import com.smb.theatre.repository.PerformanceRepository;
 import com.smb.theatre.service.interfaces.PerformanceService;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +17,13 @@ public class PerformanceServiceImpl implements PerformanceService {
 
     @Override
     public List<Performance> findAll () {
-        return performanceRepository.findAll();
+        List<Performance> performances = performanceRepository.findAll();
+
+        if (performances.isEmpty()) {
+            throw new NotFoundException("No performances found.");
+        }
+
+        return performances;
     }
 
     @Override
@@ -28,22 +33,14 @@ public class PerformanceServiceImpl implements PerformanceService {
     }
 
     @Override
-    @Transactional
-    public void create (Performance performance) {
-        performanceRepository.save(performance);
+    public Performance create (Performance performance) {
+        return performanceRepository.save(performance);
     }
 
     @Override
-    @Transactional
-    public void update (Performance performance) {
-        performanceRepository.save(performance);
-    }
-
-    @Override
-    @Transactional
     public void delete (Long id) {
         performanceRepository.findById(id).orElseThrow(() ->
-                new NotFoundException("Performance with the given id not found"));
+                new NotFoundException("Performance with the given id not found."));
         performanceRepository.deleteById(id);
     }
 }

@@ -1,6 +1,6 @@
 package com.smb.theatre.service.interfaces;
 
-import com.smb.theatre.entity.User;
+import com.smb.theatre.model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,9 +12,9 @@ public interface UserService {
 
     User findById(Long id);
 
-    void create(User user);
+    User create(User user);
 
-    void update(User user);
+    User update(Long id, User user);
 
     void delete(Long id);
 }

@@ -1,10 +1,9 @@
 package com.smb.theatre.service.implementations;
 
-import com.smb.theatre.entity.Project;
+import com.smb.theatre.model.Project;
 import com.smb.theatre.exception.NotFoundException;
 import com.smb.theatre.repository.ProjectRepository;
 import com.smb.theatre.service.interfaces.ProjectService;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +17,13 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public List<Project> findAll () {
-        return projectRepository.findAll();
+        List<Project> projects = projectRepository.findAll();
+
+        if (projects.isEmpty()) {
+            throw new NotFoundException("No projects found.");
+        }
+
+        return projects;
     }
 
     @Override
@@ -28,23 +33,24 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    @Transactional
-    public void create (Project project) {
-        projectRepository.save(project);
+    public Project create (Project project) {
+        return projectRepository.save(project);
     }
 
     @Override
-    @Transactional
-    public void update (Project project) {
-        projectRepository.save(project);
+    public Project update (Long id, Project project) {
+        Project existingProject = projectRepository.findById(id)
+                .orElseThrow(() -> new NotFoundException("Project not found."));
+
+        existingProject = project;
+
+        return projectRepository.save(existingProject);
     }
 
     @Override
-    @Transactional
     public void delete (Long id) {
         projectRepository.findById(id).orElseThrow(() ->
-                new NotFoundException("Project with the given id not found"));
+                new NotFoundException("Project with the given id not found."));
         projectRepository.deleteById(id);
     }
-
 }

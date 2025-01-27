@@ -1,15 +1,13 @@
 package com.smb.theatre.controller;
 
-import com.smb.theatre.entity.User;
+import com.smb.theatre.model.User;
 import com.smb.theatre.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping
@@ -21,42 +19,32 @@ public class UserController {
     @GetMapping("/users")
     public ResponseEntity<List<User>> getAll () {
         List<User> users = userService.findAll();
-        return ResponseEntity.ok(users);
+        return new ResponseEntity<>(users, HttpStatus.FOUND);
     }
 
     @GetMapping("/users/{id}")
     public ResponseEntity<User> getUserById (@PathVariable Long id) {
         User user = userService.findById(id);
-        return ResponseEntity.ok(user);
+        return new ResponseEntity<>(user, HttpStatus.FOUND);
     }
 
     @PostMapping("/users")
-    public ResponseEntity<Void> saveUser (@RequestBody User user) {
-        userService.create(user);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+    public ResponseEntity<User> saveUser (@RequestBody User User) {
+        User user = userService.create(User);
+        return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
     @PutMapping("/users/{id}")
-    public ResponseEntity<Void> updateUser (@PathVariable Long id, @RequestBody User user) {
-
-        User updatedUser = userService.findById(id);
-
-        updatedUser.setUsername(user.getUsername());
-        updatedUser.setEmail(user.getEmail());
-        updatedUser.setMobile(user.getMobile());
-
-        userService.update(updatedUser);
-
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<User> updateUser (@PathVariable Long id,
+                                               @RequestBody User User)
+    {
+        User updatedUser = userService.update(id, User);
+        return new ResponseEntity<>(updatedUser, HttpStatus.OK);
     }
 
     @DeleteMapping("/users/{id}")
-    public ResponseEntity<Map<String, Boolean>> deleteUserById (@PathVariable Long id) {
-        User user = userService.findById(id);
-
+    public ResponseEntity<Void> deleteUserById (@PathVariable Long id) {
         userService.delete(id);
-        Map<String, Boolean> response = new HashMap<>();
-        response.put("deleted", Boolean.TRUE);
-        return ResponseEntity.ok(response);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

@@ -1,6 +1,6 @@
 package com.smb.theatre.service.interfaces;
 
-import com.smb.theatre.entity.Performance;
+import com.smb.theatre.model.Performance;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,9 +12,7 @@ public interface PerformanceService {
 
     Performance findById (Long id);
 
-    void create (Performance performance);
-
-    void update (Performance performance);
+    Performance create (Performance performance);
 
     void delete (Long id);
 }

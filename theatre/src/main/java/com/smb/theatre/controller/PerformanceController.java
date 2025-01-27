@@ -1,16 +1,13 @@
 package com.smb.theatre.controller;
 
-import com.smb.theatre.entity.Performance;
-import com.smb.theatre.entity.Project;
+import com.smb.theatre.model.Performance;
 import com.smb.theatre.service.interfaces.PerformanceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping
@@ -32,32 +29,14 @@ public class PerformanceController {
     }
 
     @PostMapping("/performances")
-    public ResponseEntity<Project> savePerformance (@RequestBody Performance performance) {
-        performanceService.create(performance);
-        return new ResponseEntity<>(HttpStatus.CREATED);
-    }
-
-    @PutMapping("/performances/{id}")
-    public ResponseEntity<Void> updatePerformance (@PathVariable Long id, @RequestBody Performance performance) {
-
-        Performance updatedPerformance = performanceService.findById(id);
-
-        updatedPerformance.setStatus(performance.getStatus());
-        updatedPerformance.setType(performance.getType());
-        updatedPerformance.setDescription(performance.getDescription());
-
-        performanceService.update(performance);
-
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<Performance> savePerformance (@RequestBody Performance Performance) {
+        Performance performance = performanceService.create(Performance);
+        return new ResponseEntity<>(performance, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/performances/{id}")
-    public ResponseEntity<Map<String, Boolean>> deletePerformanceById (@PathVariable Long id) {
-        Performance performance = performanceService.findById(id);
-
+    public ResponseEntity<Void> deletePerformanceById (@PathVariable Long id) {
         performanceService.delete(id);
-        Map<String, Boolean> response = new HashMap<>();
-        response.put("deleted", Boolean.TRUE);
-        return ResponseEntity.ok(response);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

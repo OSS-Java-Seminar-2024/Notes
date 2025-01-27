@@ -1,6 +1,6 @@
 package com.smb.theatre.repository;
 
-import com.smb.theatre.entity.Location;
+import com.smb.theatre.model.Location;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

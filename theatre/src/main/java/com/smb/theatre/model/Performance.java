@@ -1,28 +1,24 @@
-package com.smb.theatre.entity;
+package com.smb.theatre.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.smb.theatre.entity.enums.PerformanceType;
-import com.smb.theatre.entity.enums.PerformanceStatus;
+import com.smb.theatre.model.enums.PerformanceType;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.sql.Time;
 import java.time.LocalDateTime;
 
-@Entity
 @Data
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "performance")
 public class Performance {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NotNull
-    @Column(name = "status")
-    @Enumerated(EnumType.STRING)
-    private PerformanceStatus status;
 
     @Column(name = "type")
     @Enumerated(EnumType.STRING)
@@ -44,12 +40,10 @@ public class Performance {
     private LocalDateTime updatedAt;
 
     @ManyToOne
-    @JoinColumn(name = "project_id")
-    @JsonBackReference("project-performance-reference")
+    @JoinColumn(name = "project_id", referencedColumnName = "id", nullable = false)
     private Project project;
 
     @ManyToOne
-    @JoinColumn(name = "location_id")
-    @JsonBackReference("location-performance-reference")
+    @JoinColumn(name = "location_id", referencedColumnName = "id", nullable = false)
     private Location location;
 }

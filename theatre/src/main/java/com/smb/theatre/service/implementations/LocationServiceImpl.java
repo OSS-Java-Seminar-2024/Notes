@@ -1,10 +1,9 @@
 package com.smb.theatre.service.implementations;
 
-import com.smb.theatre.entity.Location;
+import com.smb.theatre.model.Location;
 import com.smb.theatre.exception.NotFoundException;
 import com.smb.theatre.repository.LocationRepository;
 import com.smb.theatre.service.interfaces.LocationService;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +17,13 @@ public class LocationServiceImpl implements LocationService {
 
     @Override
     public List<Location> findAll () {
-        return locationRepository.findAll();
+        List<Location> locations = locationRepository.findAll();
+
+        if (locations.isEmpty()) {
+            throw new NotFoundException("No locations found.");
+        }
+
+        return locations;
     }
 
     @Override
@@ -28,15 +33,8 @@ public class LocationServiceImpl implements LocationService {
     }
 
     @Override
-    @Transactional
-    public void create (Location location) {
-        locationRepository.save(location);
-    }
-
-    @Override
-    @Transactional
-    public void update (Location location) {
-        locationRepository.save(location);
+    public Location create (Location location) {
+        return locationRepository.save(location);
     }
 
     @Override

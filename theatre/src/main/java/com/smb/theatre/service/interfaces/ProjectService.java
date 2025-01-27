@@ -1,6 +1,6 @@
 package com.smb.theatre.service.interfaces;
 
-import com.smb.theatre.entity.Project;
+import com.smb.theatre.model.Project;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,9 +12,9 @@ public interface ProjectService {
 
     Project findById (Long id);
 
-    void create (Project project);
+    Project create (Project Project);
 
-    void update (Project project);
+    Project update (Long id, Project Project);
 
     void delete (Long id);
 }

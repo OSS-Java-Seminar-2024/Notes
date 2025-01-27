@@ -1,6 +1,6 @@
 package com.smb.theatre.service.interfaces;
 
-import com.smb.theatre.entity.Department;
+import com.smb.theatre.model.Department;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,9 +12,7 @@ public interface DepartmentService {
 
     Department findById (Long id);
 
-    void create (Department department);
-
-    void update (Department department);
+    Department create (Department department);
 
     void delete (Long id);
 

@@ -1,6 +1,6 @@
 package com.smb.theatre.service.implementations;
 
-import com.smb.theatre.entity.Department;
+import com.smb.theatre.model.Department;
 import com.smb.theatre.exception.NotFoundException;
 import com.smb.theatre.repository.DepartmentRepository;
 import com.smb.theatre.service.interfaces.DepartmentService;
@@ -17,8 +17,15 @@ public class DepartmentServiceImpl implements DepartmentService {
     private DepartmentRepository departmentRepository;
 
     @Override
+    @Transactional
     public List<Department> findAll () {
-        return departmentRepository.findAll();
+        List<Department> departments = departmentRepository.findAll();
+
+        if (departments.isEmpty()) {
+            throw new NotFoundException("No departments found.");
+        }
+
+        return departments;
     }
 
     @Override
@@ -28,22 +35,14 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     @Override
-    @Transactional
-    public void create (Department department) {
-        departmentRepository.save(department);
+    public Department create (Department department) {
+        return departmentRepository.save(department);
     }
 
     @Override
-    @Transactional
-    public void update (Department department) {
-        departmentRepository.save(department);
-    }
-
-    @Override
-    @Transactional
     public void delete (Long id) {
         departmentRepository.findById(id).orElseThrow(() ->
-                new NotFoundException("Performance with the given id not found"));
+                new NotFoundException("Department with the given id not found."));
         departmentRepository.deleteById(id);
     }
 }
