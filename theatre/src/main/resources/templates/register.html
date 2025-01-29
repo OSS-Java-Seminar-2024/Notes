@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="/register" method="post" th:object="${user}">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" th:field="*{username}" required/><br/>
+
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" th:field="*{firstName}" required/><br/>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" th:field="*{lastName}" required/><br/>
+
+        <label for="passwordHash">Password:</label>
+        <input type="password" id="passwordHash" name="passwordHash" th:field="*{passwordHash}" required/><br/>
+
+        <label for="passwordRepeat">Repeat Password:</label>
+        <input type="password" id="passwordRepeat" name="passwordRepeat" th:field="*{passwordRepeat}" required/><br/>
+
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="/login">Login</a></p>
+</body>
+</body>
+</html>

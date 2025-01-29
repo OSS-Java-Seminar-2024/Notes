@@ -1,12 +1,12 @@
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Spring Security Example</title>
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/static/css/style.css}">
 </head>
 <body>
-<h1>Welcome!</h1>
-
-<p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+<h1>Welcome to the Theatre Management System</h1>
+<p>Explore the system and manage your projects and users!</p>
+<p><a href="/register">Register</a> | <a href="/login">Login</a></p>
 </body>
 </html>

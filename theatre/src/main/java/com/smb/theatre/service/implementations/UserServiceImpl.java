@@ -1,5 +1,6 @@
 package com.smb.theatre.service.implementations;
 
+import com.smb.theatre.exception.InvalidRequestException;
 import com.smb.theatre.model.Department;
 import com.smb.theatre.model.Project;
 import com.smb.theatre.model.User;
@@ -9,6 +10,7 @@ import com.smb.theatre.repository.ProjectRepository;
 import com.smb.theatre.repository.UserRepository;
 import com.smb.theatre.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +20,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
     @Autowired
     DepartmentRepository departmentRepository;
     @Autowired
@@ -42,6 +46,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User create (User user) {
+
+        if (user.getPasswordHash() == null || !user.getPasswordHash().equals(user.getPasswordHash())) {
+            throw new InvalidRequestException("Passwords do not match.");
+        }
+
+        // Encrypt the password before saving the user.
+        user.setPasswordHash((passwordEncoder.encode(user.getPasswordHash())));
 
         // Retrieve the Department and Project from database based on their IDs
         Department department = null;
