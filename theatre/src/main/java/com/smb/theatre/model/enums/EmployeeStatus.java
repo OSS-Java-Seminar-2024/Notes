@@ -1,6 +1,6 @@
 package com.smb.theatre.model.enums;
 
-public enum UserStatus {
+public enum EmployeeStatus {
     ACTIVE,
     INACTIVE,
     SUSPENDED

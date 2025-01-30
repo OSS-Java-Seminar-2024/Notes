@@ -1,18 +1,19 @@
 package com.smb.theatre.model;
 
-import com.smb.theatre.model.enums.UserRole;
-import com.smb.theatre.model.enums.UserStatus;
+import com.smb.theatre.model.enums.EmployeeStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table (name = "user")
-public class User {
+@Table (name = "employee")
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,11 +25,8 @@ public class User {
     @Column(name = "email", unique = true, nullable = false)
     private String email;
 
-    @Column(name = "mobile", unique = true, nullable = false)
-    private String mobile;
-
-    @Column(name = "password_hash", nullable = false)
-    private String passwordHash;
+    @Column(name = "password", unique = true, nullable = false)
+    private String password;
 
     @Column(name = "first_name", nullable = false)
     private String firstName;
@@ -36,13 +34,12 @@ public class User {
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @Column(name = "role")
-    @Enumerated(EnumType.STRING)
-    private UserRole role;
+    @Column(name = "roles")
+    private List<String> roles;
 
     @Column(name = "status")
     @Enumerated(EnumType.STRING)
-    private UserStatus status;
+    private EmployeeStatus status;
 
     @ManyToOne
     @JoinColumn(name = "department_id", referencedColumnName = "id", nullable = false)
@@ -52,12 +49,9 @@ public class User {
     @JoinColumn(name = "project_id", referencedColumnName = "id", nullable = false)
     private Project project;
 
-    @Column(name = "created_at")
-    private LocalDateTime createdAt;
+    @Column(name = "joining_date")
+    private LocalDateTime joiningDate;
 
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
-
-    @Column(name = "deleted_at")
-    private LocalDateTime deletedAt;
+    @Column(name = "retiring_date")
+    private LocalDateTime retiringDate;
 }

@@ -1,32 +1,30 @@
+
 <!DOCTYPE html>
 
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-</head>
-<body>
-    <h1>Register</h1>
-    <form action="/register" method="post" th:object="${user}">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" th:field="*{username}" required/><br/>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
 
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" th:field="*{firstName}" required/><br/>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Registration</title>
+    </head>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" th:field="*{lastName}" required/><br/>
+    <body style="text-align: center">
+        <h1>Register an account</h1>
 
-        <label for="passwordHash">Password:</label>
-        <input type="password" id="passwordHash" name="passwordHash" th:field="*{passwordHash}" required/><br/>
+        <div th:if="${param.error}"> Passwords do not match. </div>
 
-        <label for="passwordRepeat">Repeat Password:</label>
-        <input type="password" id="passwordRepeat" name="passwordRepeat" th:field="*{passwordRepeat}" required/><br/>
+        <form th:action="@{/register}" method="post">
+            <div><label> User Name : <input type="text" name="username"/> </label></div>
+            <div><label> Password: <input type="password" name="password"/> </label></div>
+            <div><label> Repeated password: <input type="password" name="repeatedPassword"/> </label></div>
+            <div><label> First Name: <input type="text" name="firstName"/> </label></div>
+            <div><label> Last Name: <input type="text" name="lastName"/> </label></div>
+            <div><input type="submit" value="Register"/></div>
 
-        <button type="submit">Register</button>
-    </form>
-    <p>Already have an account? <a href="/login">Login</a></p>
-</body>
-</body>
+            <div>Already have an account? <a th:href="@{login}">Log in</a></div>
+        </form>
+    </body>
+
 </html>
