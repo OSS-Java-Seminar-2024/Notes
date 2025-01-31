@@ -56,9 +56,9 @@ and up-to-date information, bringing more order and less stress to our projects.
 - [x] mysql Docker database
 - [x] pull instructions for Docker database
 - [x] Write Dockerfile and compose.yml
-- user register
-- user management
-- announcing projects and adding performances
+- [x] user register (save to database)
+- user management (authentication and UI)
+- announcing projects and adding performances (expanding controllers)
 - adding users to departments
 - adding locations
 - listing all tables
