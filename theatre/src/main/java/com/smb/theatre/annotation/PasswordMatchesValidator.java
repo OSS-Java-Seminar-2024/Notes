@@ -1,6 +1,6 @@
 package com.smb.theatre.annotation;
 
-import com.smb.theatre.model.dto.EmployeeDto;
+import com.smb.theatre.model.dto.UserDto;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
@@ -10,9 +10,12 @@ public class PasswordMatchesValidator
     @Override
     public void initialize (PasswordMatches constraintAnnotation) {
     }
+
     @Override
     public boolean isValid (Object obj, ConstraintValidatorContext context) {
-        EmployeeDto employee = (EmployeeDto) obj;
-        return employee.getPassword().equals(employee.getMatchingPassword());
+        UserDto employee = (UserDto) obj;
+        //return employee.getPassword().equals(employee.getMatchingPassword());
+        return true;
     }
+
 }

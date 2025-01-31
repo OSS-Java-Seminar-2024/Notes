@@ -1,27 +1,22 @@
 package com.smb.theatre.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "location")
 public class Location {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "country", nullable = false)
+    @Column(nullable = false)
     private String country;
-
-    @Column(name = "city", nullable = false)
+    @Column(nullable = false)
     private String city;
-
-    @Column(name = "address", nullable = false)
+    @Column(nullable = false)
     private String address;
+    @Column
+    private String description;
 }

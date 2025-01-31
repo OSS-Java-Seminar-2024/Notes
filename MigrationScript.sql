@@ -4,23 +4,21 @@ drop database if exists Theatre;
 create database Theatre;
 use Theatre;
 
--- Creating table employee (user) --
+-- Creating table user --
 create table user (
     id int not null auto_increment,
-    username varchar(30) unique not null,
-    email varchar(60) unique not null,
-    mobile varchar(15) unique not null,
-    password_hash varchar(64) not null,
     first_name varchar(30) not null,
-    last_name varchar(30) not null,
-    role varchar(10),
+    last_name varchar(50) not null,
+    username varchar(20) unique not null,
+    email varchar(60) unique not null,
+    password varchar(60) not null,
     status varchar(10),
-    created_at datetime default current_timestamp,
-    updated_at datetime default current_timestamp,
-    deleted_at datetime,
+    role varchar(10),
     
-    department_id int not null,
-    project_id int not null,
+    joining_date datetime default current_timestamp,
+    retiring_date datetime,
+    
+    department_id int,
     
     primary key (id)
 );
@@ -29,13 +27,13 @@ create table user (
 create table project (
     id int not null auto_increment,
     name varchar(50) unique not null,
+	status varchar(10),
     type varchar(10),
-    status varchar(10),
-    start_date datetime,
-    description text,
-    created_at datetime default current_timestamp,
-    updated_at datetime default current_timestamp,
-    deleted_at datetime,
+	description text,
+    user_role varchar(10),
+
+    start_date datetime default current_timestamp,
+    completion_date datetime,
     
     primary key (id)
 );
@@ -45,8 +43,10 @@ create table performance (
 	id int not null auto_increment,
     type varchar(10),
     description text,
-    date_time date,
+    
+    date_time_held datetime,
     duration time,
+    
     created_at datetime default current_timestamp,
     updated_at datetime default current_timestamp,
 
@@ -71,14 +71,28 @@ create table location (
     country varchar(40) not null,
     city varchar(40) not null,
     address varchar(80) not null,
+    description text,
     
     primary key (id)
 );
+
+-- Create table user_on_project --
+create table user_on_project (    
+    user_id int not null,
+    project_id int not null,
+    
+    primary key (user_id, project_id)
+);
+
 
 -- Add foreign keys --
 alter table performance add foreign key (project_id) references project(id);
 alter table performance add foreign key (location_id) references location(id);
 
-alter table user add foreign key (project_id) references project(id);
 alter table user add foreign key (department_id) references department(id);
+
+alter table user_on_project add foreign key (user_id) references user(id);
+alter table user_on_project add foreign key (project_id) references project(id);
+
+
 

@@ -1,38 +1,24 @@
 package com.smb.theatre.controller;
 
-import com.smb.theatre.model.Employee;
-import com.smb.theatre.service.interfaces.EmployeeService;
+import com.smb.theatre.model.User;
+import com.smb.theatre.model.dto.UserDto;
+import com.smb.theatre.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
-public class EmployeeController {
+@RestController
+@RequestMapping
+public class UserController {
 
     @Autowired
-    private EmployeeService employeeService;
+    private UserService userService;
 
-    @GetMapping("/")
-    public String showHome (Model model) {
-        return "home";
-    }
-
-    // Redirect if the user is already logged in.
-    @GetMapping("/login")
-    public String loginPage (Authentication authentication) {
-        if (authentication != null && authentication.isAuthenticated()) {
-            return "redirect:/home";
-        }
-        return "login";
-    }
-
+    /*
     @GetMapping("/greeting")
     public String greeting (@RequestParam(name="name",
             required=false, defaultValue="World") String name, Model model)
@@ -41,8 +27,6 @@ public class EmployeeController {
         return "greeting";
     }
 
-
-    /*
     @GetMapping("/employee/registration")
     public String showRegistrationForm (WebRequest request, Model model) {
         EmployeeDto employeeDto = new EmployeeDto();
@@ -77,36 +61,38 @@ public class EmployeeController {
     public String showLoginPage() {
         return "login";  // Return the login HTML page
     }
-    */
-    @GetMapping("/employees")
-    public ResponseEntity<List<Employee>> getAll () {
-        List<Employee> employees = employeeService.findAll();
-        return new ResponseEntity<>(employees, HttpStatus.FOUND);
+
+
+    @GetMapping("/users")
+    public ResponseEntity<List<User>> getAll () {
+        List<UserDto> users = userService.findAllUsers();
+        return new ResponseEntity<>(users, HttpStatus.FOUND);
     }
 
     @GetMapping("/employees/{id}")
-    public ResponseEntity<Employee> getUserById (@PathVariable Long id) {
-        Employee employee = employeeService.findById(id);
-        return new ResponseEntity<>(employee, HttpStatus.FOUND);
+    public ResponseEntity<User> getUserById (@PathVariable Long id) {
+        User user = userService.findById(id);
+        return new ResponseEntity<>(user, HttpStatus.FOUND);
     }
 
     @PostMapping("/employees")
-    public ResponseEntity<Employee> saveUser (@RequestBody Employee Employee) {
-        Employee employee = employeeService.create(Employee);
-        return new ResponseEntity<>(employee, HttpStatus.CREATED);
+    public ResponseEntity<User> saveUser (@RequestBody User User) {
+        User user = userService.create(User);
+        return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
     @PutMapping("/employees/{id}")
-    public ResponseEntity<Employee> updateUser (@PathVariable Long id,
-                                                @RequestBody Employee Employee)
+    public ResponseEntity<User> updateUser (@PathVariable Long id,
+                                            @RequestBody User User)
     {
-        Employee updatedEmployee = employeeService.update(id, Employee);
-        return new ResponseEntity<>(updatedEmployee, HttpStatus.OK);
+        User updatedUser = userService.update(id, User);
+        return new ResponseEntity<>(updatedUser, HttpStatus.OK);
     }
 
     @DeleteMapping("/employees/{id}")
     public ResponseEntity<Void> deleteUserById (@PathVariable Long id) {
-        employeeService.delete(id);
+        userService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+    */
 }

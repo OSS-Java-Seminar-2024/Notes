@@ -2,41 +2,31 @@ package com.smb.theatre.model;
 
 import com.smb.theatre.model.enums.PerformanceType;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.sql.Time;
 import java.time.LocalDateTime;
 
 @Data
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "performance")
 public class Performance {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "type")
+    @Column
     @Enumerated(EnumType.STRING)
     private PerformanceType type;
-
-    @Column(name = "description")
+    @Column
     private String description;
-
-    @Column(name = "date_time")
-    private LocalDateTime dateTime;
-
-    @Column(name = "duration")
+    @Column
+    private LocalDateTime dateTimeHeld;
+    @Column
     private Time duration;
-
-    @Column(name = "created_at")
+    @Column
     private LocalDateTime createdAt;
-
-    @Column(name = "updated_at")
+    @Column
     private LocalDateTime updatedAt;
 
     @ManyToOne
